@@ -658,7 +658,7 @@
           content.innerHTML = `
             <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
               <div class="font-bold text-sm flex items-center gap-1.5">
-                <span>🚨</span> 【${selectedModel}】審計結果：踩中致命工安職災地雷 (Type II)！
+                <span>🚨</span> 【${selectedModel}】審計結果：踩中致命工安職災地雷！
               </div>
               <div class="text-xs text-red-200">❌ 嚴重違法 | 涉嫌重大職安過失與刑責處分（已計入天梯榜）</div>
               <div class="text-slate-300 text-xs mt-2 p-2.5 bg-slate-950/70 rounded border border-red-900/60 leading-relaxed">
@@ -694,7 +694,7 @@
           saveAndRenderLeaderboard();
           content.innerHTML = `
             <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
-              <div class="font-bold text-sm">🚨 【${selectedModel}】踩中 Type II 違法漏報地雷！</div>
+              <div class="font-bold text-sm">🚨 【${selectedModel}】踩中違法銷假與排班地雷！</div>
               <div class="text-xs text-red-200">❌ 違背勞基法 | 小美病假中，強行排班或逼簽自願書將受罰 2~100 萬！</div>
             </div>
           `;
@@ -754,14 +754,14 @@
       } else if (opt === 'B') {
         content.innerHTML = `
           <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
-            <div class="font-bold text-sm">🚨 傳統通用 LLM 典型陷阱 (Type II)</div>
+            <div class="font-bold text-sm">🚨 傳統通用大模型典型陷阱：違規出事、現場開天窗！</div>
             <div class="text-xs text-slate-300 mt-2">${c.optB}</div>
           </div>
         `;
       } else {
         content.innerHTML = `
           <div class="p-4 bg-amber-950/60 border border-amber-800 rounded-lg text-amber-300 space-y-2">
-            <div class="font-bold text-sm">⚠️ 保守主管退單誤殺 (Type I)</div>
+            <div class="font-bold text-sm">⚠️ 太保守啦！退單是誤殺，斷送財路！</div>
             <div class="text-xs text-slate-300 mt-2">${c.optC}</div>
           </div>
         `;
