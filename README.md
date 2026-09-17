@@ -1,45 +1,72 @@
 # 🏛️ 天工企業決策競技場 (Tiangong Enterprise Decision Arena)
-> **Sovereign-E-Tiangong-Decision-Arena** | 三軌盲測 ✕ 300 題約束滿意評測 ✕ 靜態 GitHub Pages SPA 交付基建
+> 專為製造業與中小企業打造的「三軌盲測 ✕ 300 題約束滿意」決策評測平台
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
-[![Verification](https://img.shields.io/badge/Checks-100%25_PASS-brightgreen.svg)](tests/run_all_checks.py)
-[![Type II Error](https://img.shields.io/badge/Type_II_Error-0.0%25-success.svg)](datasets/enterprise_ale_benchmark.json)
+[![Online Arena](https://img.shields.io/badge/Live_Arena-GitHub_Pages-cyan.svg)](https://sdrmsung.github.io/Sovereign-E-Tiangong-Decision-Arena/)
+[![Type II Error](https://img.shields.io/badge/Type_II_Error-0.0%25-brightgreen.svg)](datasets/enterprise_ale_benchmark.json)
 
 ---
 
-## 🧭 核心願景 (Vision & First Principle)
-傳統 LLM Benchmark 測寫代碼與做高數，無法打動中小企業老闆。
-企管大模型必須在真實「**人機料法環**」衝突下接受殘酷盲測！
+## 🧭 核心願景：何謂「天工」？(Vision & The Heritage of Tiangong)
 
-本競技場實施 **「純背景先行 ➔ 三軌分流作答 ➔ 統一開箱拆解」**：
-1. **軌道 1（拷打外部 LLM）**：一鍵複製題幹貼給 ChatGPT/Claude，看其如何踩入排班與法律幻覺。
-2. **軌道 2（中立單選盲測）**：包含天工最佳解、Type II 致命漏報陷阱、Type I 保守誤殺陷阱。
-3. **軌道 3（主管硬核自填）**：供 40+ 資深生管/廠長直接手打老經驗調度對策。
+> **「巧奪天工，開物成務。」—— 取自 17 世紀明代宋應星《天工開物》之工匠意志。**
 
----
+《天工開物》（1637 年）被達爾文譽為「17 世紀的工藝與生管百科全書」，詳載五金冶煉、鍛造、製麴等實打實的製程物理與材料物性，絕非文人清談之空論。
 
-## 📦 評審最小四套件 (Judge Minimal Delivery Kit)
-- **1. 乾淨介面**：`web/index.html` (純靜態 SPA，託管於 GitHub Pages，零後端伺服器依賴)。
-- **2. 終端 CLI**：`python src/cli.py --list` / `python src/cli.py --eval CASE_HR_001`。
-- **3. 核心 Engine**：`src/engine.py` (離線形式化驗證器與真值對齊引擎)。
-- **4. 一鍵跑測**：`python tests/run_all_checks.py` (零第三方依賴，<10ms 快速通過)。
+傳承此一實業精神，**「天工」在現代 AI 決策系統中承載著三重堅定承諾**：
+1. **工藝與現場底蘊（立足物理）**：深入車間車床、尊重「人機料法環」與現場限制，杜絕浮誇吹水。
+2. **巧奪天工的精確度（數學極致）**：以形式化 SAT 求解器在不可行的千百種死鎖中，毫秒級求出剛性合規、一分不差的 Pareto 最優解。
+3. **開物成務的商業實證（轉化價值）**：拒絕傳統 LLM 的「文科生場面話」，透過參數化約束運算，把突發混亂的現場排班轉化為確定的營收利潤。
 
 ---
 
-## 🚀 快速上手 (Quick Start)
+## 🎯 現場痛點：為什麼需要殘酷盲測？
+通用大語言模型（LLM）擅長寫作與編程，但在面臨中小製造業真實的突發異常時，往往給出**表面流暢專業、現場卻致命違法的方案**（如：將在急診室吊點滴的小美排入急單加班、忽視模具換模時間、踩中勞基法連七天出勤重罰）。
 
-### 終端 CLI 評測
-```bash
-# 查看所有測試案例
-python src/cli.py --list
+本競技場不測代碼、不測數學，只測最殘酷的**現場約束滿足與實戰決策力**。
 
-# 評測特定情境 (包含 LLM 與 天工大腦雙軌對決)
-python src/cli.py --eval CASE_HR_001
+---
+
+## 🔄 三軌盲測機制 (3-Track Blind Evaluation)
+
+```
+                            【STAGE 0：純現場題幹 (零劇透、零洩題)】
+                            • 客戶急單 500 件、報價 $25、明日 17:00 前交貨
+                            • 人員名冊：小美(請假)、阿強(可用5h)、大明(可用2h)
+                            • 外協選項：協興外協 ($12/件，起訂100件)
+                                               │
+               ┌───────────────────────────────┼───────────────────────────────┐
+               ▼                               ▼                               ▼
+    【STAGE 1 ─ 拷打外部 LLM】      【STAGE 2 ─ 中立單選盲測】      【STAGE 3 ─ 主管硬核自填】
+    • 一鍵複製純現場題幹            • 展開 4 個無標籤中立選項       • 開放式輸入框
+    • 貼給 ChatGPT / Claude         • [A] 天工形式化最佳解          • 40+ 資深生管憑老經驗自填
+    • 觀察大模型是否踩入請假幻覺    • [B] 致命漏報陷阱 (Type II)    • （完全不受選項先入為主干擾）
+                                    • [C] 保守誤殺陷阱 (Type I)     
+               │                               │                               │
+               └───────────────────────────────┼───────────────────────────────┘
+                                               ▼
+                              【STAGE 4：裁判機開箱總戰報 (The Verdict)】
+                              • 揭曉各選項法律風險與真實利潤對比
+                              • 抓出 LLM 致命漏報（忽視不可用人員）
+                              • 杜絕主管保守誤殺（精算外協邊際利潤）
 ```
 
-### 一鍵跑測驗收 (<10ms)
+---
+
+## 🌐 線上即時體驗
+無需安裝任何環境，直接透過瀏覽器開啟：  
+👉 **[天工企業決策競技場 在線盲測平台](https://sdrmsung.github.io/Sovereign-E-Tiangong-Decision-Arena/)**
+
+---
+
+## 💻 本地終端機快速指令
+
 ```bash
-python tests/run_all_checks.py
+# 列出題庫所有基準案例
+python src/cli.py --list
+
+# 評測指定案例（雙軌對決）
+python src/cli.py --eval CASE_HR_001
 ```
 
 ---
