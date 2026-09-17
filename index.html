@@ -43,18 +43,20 @@
         </div>
       </div>
 
-      <!-- 10 大方向膠囊標籤按鈕 -->
-      <div class="flex flex-wrap gap-1.5 text-xs font-mono" id="category-pills">
-        <button onclick="switchCategory('HR')" class="cat-pill active px-3 py-1 rounded-full border border-cyan-500 bg-cyan-950 text-cyan-300 font-semibold transition hover:border-cyan-400">👥 人員與排班</button>
-        <button onclick="switchCategory('PROD')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">🏭 產能與交期</button>
-        <button onclick="switchCategory('MC')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">⚠️ 設備與維護</button>
-        <button onclick="switchCategory('SCM')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">🤝 供應鏈外協</button>
-        <button onclick="switchCategory('SCRAP')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">📉 成本與良率</button>
-        <button onclick="switchCategory('QA')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">🔍 品質與客訴</button>
-        <button onclick="switchCategory('FIN')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">💰 財務與資金</button>
-        <button onclick="switchCategory('LAW')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">⚖️ 法規與合規</button>
-        <button onclick="switchCategory('TRIZ')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">⚡ 精實與TRIZ</button>
-        <button onclick="switchCategory('CRISIS')" class="cat-pill px-3 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">🚨 危機與變革</button>
+      <!-- 對齊 06_03 SPEC 第四章：九大產業插槽架構 -->
+      <div class="flex flex-wrap items-center gap-1.5 text-xs font-mono" id="category-pills">
+        <span class="text-[11px] text-cyan-400 font-bold py-1 mr-1">【製造核心 5M1E】：</span>
+        <button onclick="switchCategory('MAN')" class="cat-pill active px-2.5 py-1 rounded-full border border-cyan-500 bg-cyan-950 text-cyan-300 font-semibold transition hover:border-cyan-400">01_人 (Man: 排班/出勤)</button>
+        <button onclick="switchCategory('MACHINE')" class="cat-pill px-2.5 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">02_機 (Machine: 跳機/換模)</button>
+        <button onclick="switchCategory('MATERIAL')" class="cat-pill px-2.5 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">03_料 (Material: 外協/BOM)</button>
+        <button onclick="switchCategory('METHOD')" class="cat-pill px-2.5 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">04_法/財 (Method: 勞基/資金)</button>
+        <button onclick="switchCategory('ENV')" class="cat-pill px-2.5 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200">05_環 (Logistics: 物流/TOU電價)</button>
+        
+        <span class="text-[11px] text-amber-400 font-bold py-1 ml-2 mr-1">【開源生態擴充槽】：</span>
+        <button onclick="switchCategory('RESTAURANT')" class="cat-pill px-2.5 py-1 rounded-full border border-amber-900/60 bg-amber-950/40 text-amber-300 transition hover:border-amber-700">06_🍽️ 餐飲排班</button>
+        <button onclick="switchCategory('HEALTHCARE')" class="cat-pill px-2.5 py-1 rounded-full border border-amber-900/60 bg-amber-950/40 text-amber-300 transition hover:border-amber-700">07_🏥 醫療護理</button>
+        <button onclick="switchCategory('CONSTRUCT')" class="cat-pill px-2.5 py-1 rounded-full border border-amber-900/60 bg-amber-950/40 text-amber-300 transition hover:border-amber-700">08_🏗️ 營造工安</button>
+        <button onclick="switchCategory('RETAIL')" class="cat-pill px-2.5 py-1 rounded-full border border-amber-900/60 bg-amber-950/40 text-amber-300 transition hover:border-amber-700">09_🛍️ 零售調撥</button>
       </div>
 
       <!-- 當前題目下拉選單與前後題導航 -->
@@ -62,12 +64,17 @@
         <div class="flex items-center gap-2">
           <span class="text-slate-400">當前題號：</span>
           <select id="case-dropdown" onchange="loadCaseById(this.value)" class="bg-slate-950 border border-slate-700 text-cyan-400 rounded px-2.5 py-1 text-xs font-mono focus:outline-none focus:border-cyan-500">
-            <option value="CASE_HR_001">CASE_HR_001: 人資排班 ─ 小美突發請假與急單排程</option>
-            <option value="CASE_HR_002">CASE_HR_002: 人資合規 ─ 資深技師老張連七天例休陷阱</option>
-            <option value="CASE_PROD_001">CASE_PROD_001: 生管調度 ─ 1號主要高速沖床突發跳機</option>
-            <option value="CASE_PROD_002">CASE_PROD_002: 製造物性 ─ 鋁板瑕疵率超標與動態領料放大</option>
-            <option value="CASE_ORD_001">CASE_ORD_001: 銷存營運 ─ 老闆口頭急單與外協利潤二選一</option>
-            <option value="CASE_FIN_001">CASE_FIN_001: 資金調度 ─ 月底現金流臨界與銀行額度取捨</option>
+            <option value="CASE_HR_001">CASE_HR_001: 👥 人員與排班 ─ 人資排班：小美突發請假與急單排班</option>
+            <option value="CASE_HR_002">CASE_HR_002: 👥 人員與排班 / 勞基法 ─ 人資合規：資深技師老張連七天例休陷阱</option>
+            <option value="CASE_PROD_001">CASE_PROD_001: 🏭 產能與交期 ─ 生管調度：1號高速沖床突發跳機維修</option>
+            <option value="CASE_MC_001">CASE_MC_001: ⚠️ 設備與維護 ─ 設備運維：連續高溫稼動與刀具預防性更換</option>
+            <option value="CASE_SCM_001">CASE_SCM_001: 🤝 供應鏈外協 ─ 外協發包：獨家陽極處理廠臨時漲價 20%</option>
+            <option value="CASE_SCRAP_001">CASE_SCRAP_001: 📉 成本與良率 ─ 製造物性：進料瑕疵率超標與領料係數動態放大</option>
+            <option value="CASE_QA_001">CASE_QA_001: 🔍 品質與客訴 ─ 客戶稽核：出貨全檢與不良率數據衝突處置</option>
+            <option value="CASE_FIN_001">CASE_FIN_001: 💰 財務與資金 ─ 資金調度：月底現金流臨界與銀行動撥額度取捨</option>
+            <option value="CASE_LAW_001">CASE_LAW_001: ⚖️ 法規與合規 ─ 勞檢門禁：連續輪班更換之間隔休息時間合規</option>
+            <option value="CASE_TRIZ_001">CASE_TRIZ_001: ⚡ 精實與TRIZ ─ 研發工程：結構強度提升與重量上限之物理矛盾</option>
+            <option value="CASE_CRISIS_001">CASE_CRISIS_001: 🚨 危機與變革 ─ 危機處置：化學洗滌槽突發洩漏與廠區工安封鎖</option>
           </select>
         </div>
         <div class="flex items-center gap-1.5 font-mono">
@@ -303,74 +310,341 @@
   <script>
     // 內置實戰多案例字典庫
     const CASES_DB = {
-      "CASE_HR_001": {
-        id: "CASE_HR_001",
-        cat: "HR",
-        catName: "👥 人員與排班",
-        title: "人資排班：小美突發請假與急單排班",
-        background: "客戶要求明日下午 17:00 前必須交付 500 件沖壓急單（報價每件 $25 元，總營收 $12,500）。",
-        roster: [
-          { name: "小美", desc: "時薪 $260，產能 50件/h，加班上限 5h", status: "今日請假登記", isLeave: true },
-          { name: "阿強", desc: "時薪 $250，產能 60件/h，加班上限 5h", status: "正常在廠", isLeave: false },
-          { name: "大明", desc: "時薪 $220，產能 50件/h，加班上限 2h", status: "正常在廠", isLeave: false }
-        ],
-        subcontract: [
-          { title: "友廠協興", desc: "同等工藝沖壓", price: "$12 元 / 件 (起訂 100 件)", lead: "明日 16:30 可準時到廠交貨" }
-        ],
-        optA: "安排阿強加班 5h (300件) ＋ 大明加班 2h (100件)，剩餘 100 件發包友廠協興外協 ($12 × 100 = $1,200)。",
-        optB: "安排阿強加班 4h (240件) ＋ 小美加班 3.2h (160件) ＋ 大明加班 2h (100件)，廠內湊滿 500 件免外協！",
-        optC: "產線滿載人手調度緊縮，為避免延誤常規訂單，向業務通報此急單無法承接，予以婉拒。",
-        satVerdict: {
-          title: "🏆 天工大腦最佳解 (Optimal SAT)",
-          status: "✅ 100% 合規 | 淨賺 +$9,610 元 | 耗時 0.37 秒",
-          desc: "剛性剔除請假的小美，精準平衡邊際工資與協興外協起訂量(100件)，16:30 準時交貨！既滿足客戶交期，又實現最大利潤。"
-        }
+  "CASE_HR_001": {
+    "id": "CASE_HR_001",
+    "cat": "HR",
+    "catName": "👥 人員與排班",
+    "title": "人資排班：小美突發請假與急單排班",
+    "background": "客戶要求明日下午 17:00 前必須交付 500 件沖壓急單（報價每件 $25 元，總營收 $12,500）。",
+    "roster": [
+      {
+        "name": "小美",
+        "desc": "時薪 $260，產能 50件/h，加班上限 5h",
+        "status": "今日請假登記",
+        "isLeave": true
       },
-      "CASE_HR_002": {
-        id: "CASE_HR_002",
-        cat: "HR",
-        catName: "👥 人員與排班 / 勞基法",
-        title: "人資合規：資深技師老張連七天例休陷阱",
-        background: "工廠週日突發維修緊急任務，資深技師老張已連續出勤 6 天（累積 42h），主管欲指派老張出勤 4 小時並給予 3 倍工資補償以確保設備運轉。",
-        roster: [
-          { name: "老張", desc: "資深機修工，時薪 $350，專修沖床", status: "連出勤 6 天臨界", isLeave: true },
-          { name: "小李", desc: "初級技師，時薪 $200，具維修丙級", status: "連續出勤 2 天 (正常在廠)", isLeave: false }
-        ],
-        subcontract: [
-          { title: "原廠駐點特約技師", desc: "外部急修服務", price: "$600 元 / 小時", lead: "30 分鐘內可抵達" }
-        ],
-        optA: "強制排定老張第 7 天例休 24 小時；指派小李出勤維修或調用外部原廠特約技師。",
-        optB: "給予老張 3 倍加班費（時薪 $1,050）出勤 4 小時，迅速解決機修以維持產能。",
-        optC: "設備故障直接停工待週一上班再修，產線全體放假一日。",
-        satVerdict: {
-          title: "🏆 天工大腦最佳解 (勞基法第 36 條剛性守衛)",
-          status: "✅ 100% 合規 | 杜絕勞檢處分 | 設備準時修復",
-          desc: "勞基法第 36 條明定每 7 日應有 1 日例假，連七出勤即使勞工自願亦屬違法重罰！天工剛性熔斷老張排班，派工小李完全合法。"
-        }
+      {
+        "name": "阿強",
+        "desc": "時薪 $250，產能 60件/h，加班上限 5h",
+        "status": "正常在廠",
+        "isLeave": false
       },
-      "CASE_PROD_001": {
-        id: "CASE_PROD_001",
-        cat: "PROD",
-        catName: "🏭 產能與交期",
-        title: "生管調度：1號高速沖床突發跳機維修",
-        background: "下午 14:00 1號主力沖床馬達燒毀停機 4 小時（預計 18:00 復機），待加工急件 300 件，交期為當日 20:00。2號次要沖床目前閒置但加工速度慢 30%，換模需 30 分鐘。",
-        roster: [
-          { name: "1號主力沖床", desc: "產速 100件/h，折舊 $300/h", status: "14:00~18:00 跳機停機中", isLeave: true },
-          { name: "2號次要沖床", desc: "產速 70件/h，折舊 $220/h", status: "目前閒置待命 (換模需30分)", isLeave: false }
-        ],
-        subcontract: [
-          { title: "聯發極速雷射", desc: "異形沖孔加工", price: "$18 元 / 件", lead: "4 小時快遞到廠" }
-        ],
-        optA: "立即切換至 2 號沖床並啟動 30 分鐘換模，於 14:30 投產，18:48 完工交貨。",
-        optB: "等待 1 號機 18:00 復機後，以 100件/h 全速趕工 3 小時衝到 21:00 完工交貨。",
-        optC: "因主力機台故障無法在 20:00 前完成，通知客戶延遲交貨並支付違約金。",
-        satVerdict: {
-          title: "🏆 天工大腦最佳解 (機台稼動動態轉移)",
-          status: "✅ 100% 準時交貨 | 節省延遲罰款 $7,500 元",
-          desc: "形式化時間軸精算：換模耗時 0.5h，2號機加工 300 件需 4.28h，總計 4.78h（18:48 完工），精準在 20:00 期限前交付！"
-        }
+      {
+        "name": "大明",
+        "desc": "時薪 $220，產能 50件/h，加班上限 2h",
+        "status": "正常在廠",
+        "isLeave": false
       }
-    };
+    ],
+    "subcontract": [
+      {
+        "title": "友廠協興",
+        "desc": "同等工藝沖壓",
+        "price": "$12 元 / 件 (起訂 100 件)",
+        "lead": "明日 16:30 可準時到廠交貨"
+      }
+    ],
+    "optA": "安排阿強加班 5h (300件) ＋ 大明加班 2h (100件)，剩餘 100 件發包友廠協興外協 ($12 × 100 = $1,200)。",
+    "optB": "安排阿強加班 4h (240件) ＋ 小美加班 3.2h (160件) ＋ 大明加班 2h (100件)，廠內湊滿 500 件免外協！",
+    "optC": "產線滿載人手調度緊縮，為避免延誤常規訂單，向業務通報此急單無法承接，予以婉拒。"
+  },
+  "CASE_HR_002": {
+    "id": "CASE_HR_002",
+    "cat": "HR",
+    "catName": "👥 人員與排班 / 勞基法",
+    "title": "人資合規：資深技師老張連七天例休陷阱",
+    "background": "工廠週日突發維修任務，資深技師老張已連續出勤 6 天（累積 42h），主管欲指派老張出勤 4 小時並給予 3 倍工資補償以確保設備運轉。",
+    "roster": [
+      {
+        "name": "老張",
+        "desc": "資深機修工，時薪 $350，專修沖床",
+        "status": "連出勤 6 天臨界",
+        "isLeave": true
+      },
+      {
+        "name": "小李",
+        "desc": "初級技師，時薪 $200，具維修丙級",
+        "status": "連續出勤 2 天 (正常在廠)",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "原廠駐點特約技師",
+        "desc": "外部急修服務",
+        "price": "$600 元 / 小時",
+        "lead": "30 分鐘內可抵達"
+      }
+    ],
+    "optA": "強制排定老張第 7 天例休 24 小時；指派小李出勤維修或調用外部原廠特約技師。",
+    "optB": "給予老張 3 倍加班費（時薪 $1,050）出勤 4 小時，迅速解決機修以維持產能。",
+    "optC": "設備故障直接停工待週一上班再修，產線全體放假一日。"
+  },
+  "CASE_PROD_001": {
+    "id": "CASE_PROD_001",
+    "cat": "PROD",
+    "catName": "🏭 產能與交期",
+    "title": "生管調度：1號高速沖床突發跳機維修",
+    "background": "下午 14:00 1號主力沖床馬達燒毀停機 4 小時（預計 18:00 復機），待加工急件 300 件，交期為當日 20:00。2號次要沖床目前閒置但加工速度慢 30%，換模需 30 分鐘。",
+    "roster": [
+      {
+        "name": "1號主力沖床",
+        "desc": "產速 100件/h，折舊 $300/h",
+        "status": "14:00~18:00 跳機停機中",
+        "isLeave": true
+      },
+      {
+        "name": "2號次要沖床",
+        "desc": "產速 70件/h，折舊 $220/h",
+        "status": "目前閒置待命 (換模需30分)",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "聯發極速雷射",
+        "desc": "異形沖孔加工",
+        "price": "$18 元 / 件",
+        "lead": "4 小時快遞到廠"
+      }
+    ],
+    "optA": "立即切換至 2 號沖床並啟動 30 分鐘換模，於 14:30 投產，18:48 完工交貨。",
+    "optB": "等待 1 號機 18:00 復機後，以 100件/h 全速趕工 3 小時衝到 21:00 完工交貨。",
+    "optC": "因主力機台故障無法在 20:00 前完成，通知客戶延遲交貨並支付違約金。"
+  },
+  "CASE_MC_001": {
+    "id": "CASE_MC_001",
+    "cat": "MC",
+    "catName": "⚠️ 設備與維護",
+    "title": "設備運維：連續高溫稼動與刀具預防性更換",
+    "background": "CNC 車削中心連續稼動 12 小時，主軸震動感測器發出三級警報，刀具磨損度已達 88%（極限 90%）。後續尚有 50 件高硬度鈦合金工單（耗時約 2 小時）。",
+    "roster": [
+      {
+        "name": "CNC 1號主軸",
+        "desc": "高精度五軸機",
+        "status": "震動 4.2mm/s (超標警戒)",
+        "isLeave": true
+      },
+      {
+        "name": "備用備品刀具",
+        "desc": "鎢鋼塗層銑刀",
+        "status": "庫存 2 支充足 (換刀需 15 分鐘)",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "廠外精密重磨中心",
+        "desc": "刀具修磨與動態平衡",
+        "price": "$450 / 支",
+        "lead": "隔日交付"
+      }
+    ],
+    "optA": "立即暫停加工作業，安排 15 分鐘預防性停機換新刀，避免斷刀崩刃報廢整批鈦合金工件。",
+    "optB": "將加工轉速調降 5%，抱持僥倖心理衝完剩餘 50 件鈦合金工單後再更換刀具。",
+    "optC": "直接停止本批工單生產，等待原廠設備工程師明日到廠全面健檢。"
+  },
+  "CASE_SCM_001": {
+    "id": "CASE_SCM_001",
+    "cat": "SCM",
+    "catName": "🤝 供應鏈外協",
+    "title": "外協發包：獨家陽極處理廠臨時漲價 20%",
+    "background": "主力配合之外協陽極表面處理廠臨時通知明日起報價調漲 20%（由 $5/件 漲至 $6/件），否則排入 3 天後交件。客戶合約要求明日必須表面處理完成出貨 1,000 件。",
+    "roster": [
+      {
+        "name": "廠內常規產能",
+        "desc": "無自營陽極線",
+        "status": "本工序 100% 依賴外包",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "大成表面處理廠 (原主力)",
+        "desc": "陽極防鏽電鍍",
+        "price": "$6 元 / 件 (突發漲價)",
+        "lead": "今日收件明日交"
+      },
+      {
+        "title": "新配合泰山電鍍",
+        "desc": "一般陽極處理",
+        "price": "$4.8 元 / 件 (未經樣品打樣)",
+        "lead": "需先試打樣 24 小時"
+      }
+    ],
+    "optA": "本批 1,000 件急單按 $6 元發包大成以確保明日如期交付客戶；同步啟動泰山電鍍打樣評估作為次月備案。",
+    "optB": "為維護毛利拒絕漲價，直接將整批 1,000 件未試產急單轉交給泰山電鍍以節省 $1,200 元成本。",
+    "optC": "向客戶通報供應鏈突發不可抗力，單方面要求客戶接受延遲交期 3 天。"
+  },
+  "CASE_SCRAP_001": {
+    "id": "CASE_SCRAP_001",
+    "cat": "SCRAP",
+    "catName": "📉 成本與良率",
+    "title": "製造物性：進料瑕疵率超標與領料係數動態放大",
+    "background": "供應商進貨之鋁板進料檢驗不良率高達 15%（標準為 3%），若按原定 100 片發料將導致成品不足 85 件被客戶罰款。",
+    "roster": [
+      {
+        "name": "沖壓 1 線",
+        "desc": "標準投料批量 100 片",
+        "status": "進料不良率 15%",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "緊急現貨調料",
+        "desc": "向同業現貨調撥鋁板",
+        "price": "$120 / 片 (現貨加成 10%)",
+        "lead": "2 小時內送達"
+      }
+    ],
+    "optA": "依動態領料公式 alpha = 1 / (1 - 0.15) = 1.176，立即追加領料至 118 片，確保良品剛好達標 100 件。",
+    "optB": "依舊按原定 100 片發料，要求現場作業員精雕細琢把不良品修復湊數。",
+    "optC": "因材料不良率超標，全面停止生產並向供應商發起整批退貨索賠，急單違約。"
+  },
+  "CASE_QA_001": {
+    "id": "CASE_QA_001",
+    "cat": "QA",
+    "catName": "🔍 品質與客訴",
+    "title": "客戶稽核：出貨全檢與不良率數據衝突處置",
+    "background": "客戶抽檢發現出貨批量中有 5% 尺寸偏差超差，但廠內品檢報表記錄出廠不良率僅 0.5%。客戶要求立即說明並威脅全批退貨。",
+    "roster": [
+      {
+        "name": "品保組",
+        "desc": "抽樣檢驗 AQL 0.65",
+        "status": "檢驗記錄存在盲區",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "第三方公正檢驗 (SGS/工研院)",
+        "desc": "全尺寸三次元精密量測",
+        "price": "$8,000 / 批",
+        "lead": "24 小時出具權威報告"
+      }
+    ],
+    "optA": "啟動臨時應變：立即派品保主管至客戶端會同抽檢，並由第三方公正單位做盲測複驗，同時廠內庫存全面扣留全檢。",
+    "optB": "堅稱內部檢驗數據 0.5% 絕對正確，反控客戶量具校正失準惡意挑剔。",
+    "optC": "不予抗辯，直接無條件接受客戶全批 5,000 件退貨並賠償客戶停線損失。"
+  },
+  "CASE_FIN_001": {
+    "id": "CASE_FIN_001",
+    "cat": "FIN",
+    "catName": "💰 財務與資金",
+    "title": "資金調度：月底現金流臨界與銀行動撥額度取捨",
+    "background": "月底需支付供應商貨款 500 萬與員工薪資 200 萬。現有活存僅 300 萬，甲銀行信用額度動撥利率 2.5%（當日可入帳），乙銀行抵押額度利率 1.8% 但需 3 個工作天審批。",
+    "roster": [
+      {
+        "name": "公司帳戶",
+        "desc": "活存現金",
+        "status": "可用 300 萬元 (缺口 400 萬)",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "甲銀行速撥信用貸",
+        "desc": "利息 2.5%",
+        "price": "手續費 $5,000",
+        "lead": "T+0 當日入帳"
+      },
+      {
+        "title": "乙銀行低利抵押貸",
+        "desc": "利息 1.8%",
+        "price": "手續費 $3,000",
+        "lead": "T+3 工作天入帳"
+      }
+    ],
+    "optA": "組合動撥：當日動撥甲銀行 400 萬以確保薪資與貨款零延遲（守住信用死線）；後續再辦理乙銀行低利貸款借新還舊降低利息。",
+    "optB": "只申請乙銀行 1.8% 低利貸款以省利息，延遲發放員工薪資 3 天等撥款。",
+    "optC": "拒絕向銀行借款，直接將供應商 500 萬貨款開立 6 個月遠期支票強迫展延。"
+  },
+  "CASE_LAW_001": {
+    "id": "CASE_LAW_001",
+    "cat": "LAW",
+    "catName": "⚖️ 法規與合規",
+    "title": "勞檢門禁：連續輪班更換之間隔休息時間合規",
+    "background": "產線大夜班技師小陳於今晨 08:00 下班，主管因中班缺人，欲調派小陳接續今日 16:00 中班（間隔僅 8 小時）。",
+    "roster": [
+      {
+        "name": "小陳",
+        "desc": "夜班主操手",
+        "status": "今日 08:00 剛下班",
+        "isLeave": true
+      },
+      {
+        "name": "阿凱",
+        "desc": "常日班機動手",
+        "status": "今日已休假滿 24 小時",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "專業派遣技術員",
+        "desc": "短期輪班支援",
+        "price": "$300 / 小時",
+        "lead": "2 小時內報到"
+      }
+    ],
+    "optA": "剛性阻斷：依勞基法第 34 條輪班間隔強制不得少於 11 小時，禁止小陳接班；改派休息充足之阿凱或外部派遣人員接班。",
+    "optB": "私下與小陳協議給予 2 倍津貼，讓其僅休息 8 小時直接接中班出勤。",
+    "optC": "中班無人開機直接停產，向客戶宣告延遲交貨。"
+  },
+  "CASE_TRIZ_001": {
+    "id": "CASE_TRIZ_001",
+    "cat": "TRIZ",
+    "catName": "⚡ 精實與TRIZ",
+    "title": "研發工程：結構強度提升與重量上限之物理矛盾",
+    "background": "新一代工業無人機外殼要求抗衝擊強度提升 50%，但結構總重量嚴格不得增加超過 5%。研發陷入加厚即超重、減薄即易碎之物理死鎖。",
+    "roster": [
+      {
+        "name": "原設計鋁合金外殼",
+        "desc": "厚度 2.0mm，重量 450g",
+        "status": "強度不足陷入死鎖",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "碳纖維複合蜂巢板廠",
+        "desc": "TRIZ 原理 40 (複合材料) 與 原理 29 (氣壓/蜂巢結構)",
+        "price": "$850 / 件",
+        "lead": "3 天出樣"
+      }
+    ],
+    "optA": "映射 TRIZ 發明原理 40 (複合材料) 與原理 17 (空間多維化)：改採內部蜂巢中空肋骨結構，強度提高 60% 且重量反降 12%。",
+    "optB": "放棄 50% 強度指標，向業務部要求降低客戶規格要求以符合現有鋁板加工能耐。",
+    "optC": "強行將原鋁合金外殼全面加厚至 3.0mm，不顧重量超標 30% 導致無人機續航力腰斬。"
+  },
+  "CASE_CRISIS_001": {
+    "id": "CASE_CRISIS_001",
+    "cat": "CRISIS",
+    "catName": "🚨 危機與變革",
+    "title": "危機處置：化學洗滌槽突發洩漏與廠區工安封鎖",
+    "background": "下午 15:30 表面處理車間酸洗槽管線破裂，酸霧外洩警報響起，現場尚有價值 200 萬之急件待取出烘乾，距客戶交期僅剩 3 小時。",
+    "roster": [
+      {
+        "name": "工安防護隊",
+        "desc": "具備 A 級防護衣",
+        "status": "啟動二級化災處置中",
+        "isLeave": false
+      }
+    ],
+    "subcontract": [
+      {
+        "title": "毒災專業緊急應變隊",
+        "desc": "專業中和洗消服務",
+        "price": "專案出勤",
+        "lead": "15 分鐘抵達"
+      }
+    ],
+    "optA": "生命高於財產：立即下令全員撤離並啟動抽風中和系統，封鎖廠區等待化災隊處置完成；嚴禁任何人員冒險搶救工件！",
+    "optB": "命令兩名資深員工配戴簡易活性碳口罩衝入車間，於 5 分鐘內搶搬 200 萬工件以保住訂單。",
+    "optC": "關閉警報器以免引起周邊居民恐慌，要求車間開窗通風繼續作業。"
+  }
+};
 
     let currentCaseId = "CASE_HR_001";
 
@@ -413,22 +687,35 @@
       }
     }
 
-    function switchCategory(catPrefix) {
-      // 切換膠囊高亮
+    function switchCategory(slotKey) {
+      // 切換膠囊高亮樣式
       document.querySelectorAll('.cat-pill').forEach(btn => {
-        btn.classList.remove('border-cyan-500', 'bg-cyan-950', 'text-cyan-300', 'font-semibold');
-        btn.classList.add('border-slate-800', 'bg-slate-950', 'text-slate-400');
+        btn.classList.remove('border-cyan-500', 'bg-cyan-950', 'text-cyan-300', 'font-semibold', 'border-amber-500', 'bg-amber-950', 'text-amber-300');
+        if (btn.innerText.includes("06") || btn.innerText.includes("07") || btn.innerText.includes("08") || btn.innerText.includes("09")) {
+          btn.className = "cat-pill px-2.5 py-1 rounded-full border border-amber-900/60 bg-amber-950/40 text-amber-300 transition hover:border-amber-700";
+        } else {
+          btn.className = "cat-pill px-2.5 py-1 rounded-full border border-slate-800 bg-slate-950 text-slate-400 transition hover:border-slate-700 hover:text-slate-200";
+        }
       });
-      event.target.classList.remove('border-slate-800', 'bg-slate-950', 'text-slate-400');
-      event.target.classList.add('border-cyan-500', 'bg-cyan-950', 'text-cyan-300', 'font-semibold');
-
-      // 找到屬於該分類的第一題
-      const keys = Object.keys(CASES_DB);
-      const matched = keys.find(k => k.includes(catPrefix) || CASES_DB[k].cat === catPrefix);
-      if (matched) {
-        loadCaseById(matched);
+      event.target.classList.remove('border-slate-800', 'bg-slate-950', 'text-slate-400', 'border-amber-900/60', 'bg-amber-950/40');
+      if (slotKey.startsWith("RESTAURANT") || slotKey.startsWith("HEALTHCARE") || slotKey.startsWith("CONSTRUCT") || slotKey.startsWith("RETAIL")) {
+        event.target.classList.add('border-amber-400', 'bg-amber-950', 'text-amber-200', 'font-bold');
+        alert(`🌟【開源生態插槽：${event.target.innerText}】\n\n依據 SPEC 第四章規範，此槽位為社群開源擴充槽位（開放企業顧問與開發者 PR 提交）！\n\n歡迎至 GitHub 倉庫提交新行業題庫與約束模型！`);
+        return;
       } else {
-        alert("該分類題庫正陸續注入中（已具備 300 題矩陣索引）！目前可切換至已建置的 CASE_HR 或 CASE_PROD 體驗。");
+        event.target.classList.add('border-cyan-500', 'bg-cyan-950', 'text-cyan-300', 'font-semibold');
+      }
+
+      // 映射 5M1E 題庫
+      const mapping = {
+        'MAN': 'CASE_HR_001',
+        'MACHINE': 'CASE_PROD_001',
+        'MATERIAL': 'CASE_SCM_001',
+        'METHOD': 'CASE_FIN_001',
+        'ENV': 'CASE_CRISIS_001'
+      };
+      if (mapping[slotKey] && CASES_DB[mapping[slotKey]]) {
+        loadCaseById(mapping[slotKey]);
       }
     }
 
