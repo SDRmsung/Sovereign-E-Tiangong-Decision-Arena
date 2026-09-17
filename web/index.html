@@ -143,19 +143,19 @@
           <div class="text-xs text-purple-400 font-mono mb-1">STAGE 1 ─ 軌道 1</div>
           <h3 class="font-bold text-slate-200 mb-2">拷打外部通用 LLM</h3>
           <p class="text-xs text-slate-400">
-            一鍵複製已包含<strong>「150字字數限制」</strong>的純題幹，貼給 ChatGPT/Claude，再貼回由裁判機抓出隱藏法律與排班陷阱！
+            一鍵複製已包含<strong>「150字字數限制」</strong>的純題幹，貼給外部大模型，再貼回由裁判機抓出隱藏法律與排班陷阱！
           </p>
-          <!-- 4 步驟導引指示條 -->
-          <div class="mt-2 text-[11px] font-mono text-purple-300 bg-purple-950/40 border border-purple-800/40 rounded p-1.5 flex justify-between items-center">
-            <span>[1/4 複製]</span> ➔ <span>[2/4 送LLM]</span> ➔ <span>[3/4 交答案]</span> ➔ <span>[4/4 看結果]</span>
+          <!-- 5 步驟導引指示條 -->
+          <div class="mt-2 text-[10.5px] font-mono text-purple-300 bg-purple-950/40 border border-purple-800/40 rounded p-1.5 flex flex-wrap justify-between items-center gap-1">
+            <span>[1/5 複製]</span> ➔ <span>[2/5 選模型]</span> ➔ <span>[3/5 貼上]</span> ➔ <span>[4/5 送出]</span> ➔ <span>[5/5 看答案]</span>
           </div>
         </div>
         <div class="space-y-2">
           <button onclick="copyPromptAndOpenModal()" class="w-full bg-purple-900/60 hover:bg-purple-800 border border-purple-700 text-purple-200 text-xs py-2.5 rounded font-medium transition flex items-center justify-center gap-1.5 shadow">
-            <span>📋</span> <strong>1/4 複製</strong>：一鍵複製純題幹 (含字數限制)
+            <span>📋</span> <strong>1/5 複製</strong>：一鍵複製純題幹 (含字數限制)
           </button>
           <button onclick="document.getElementById('track1-paste-modal').classList.remove('hidden')" class="w-full bg-slate-800 hover:bg-slate-700 border border-purple-500/50 text-purple-300 text-xs py-2.5 rounded font-medium transition flex items-center justify-center gap-1.5">
-            <span>📥</span> <strong>3/4 交答案</strong>：貼回大模型答案並審計
+            <span>📥</span> <strong>2/5~4/5 選模型與交答案</strong>
           </button>
         </div>
       </div>
@@ -191,38 +191,54 @@
         <div class="flex justify-between items-center">
           <div class="flex items-center gap-2">
             <span class="text-lg">📥</span>
-            <h3 class="font-bold text-purple-300">【3/4 交答案】貼回外部 LLM (ChatGPT / Claude) 的調度回答</h3>
+            <h3 class="font-bold text-purple-300">【外部通用大模型審計】5 步驟標準作答流程</h3>
           </div>
           <button onclick="document.getElementById('track1-paste-modal').classList.add('hidden')" class="text-slate-500 hover:text-slate-300">✕</button>
         </div>
-        <div class="bg-purple-950/40 border border-purple-800/60 p-3 rounded-lg text-xs text-purple-200 space-y-1">
-          <div>💡 <strong>流程提醒</strong>：</div>
-          <div>• <strong>[2/4 送LLM]</strong>：打開 ChatGPT / Claude / Gemini 貼上剛才複製的題目並產出回答。</div>
-          <div>• <strong>[3/4 交答案]</strong>：將大模型產生的文字貼入下方輸入框，點擊「提交審計」。</div>
-          <div>• <strong>[4/4 看結果]</strong>：天工裁判機即時抓出致命漏報，並自動登記至天梯榜！</div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-[11px] text-slate-400 mb-1">受測大模型品牌：</label>
-            <select id="llm-model-select" class="w-full bg-slate-950 border border-slate-700 text-purple-300 rounded px-3 py-1.5 text-xs font-mono focus:outline-none focus:border-purple-500">
-              <option value="ChatGPT">ChatGPT</option>
-              <option value="Claude">Claude</option>
-              <option value="Gemini">Gemini</option>
-              <option value="Meta AI">Meta AI</option>
-              <option value="DeepSeek">DeepSeek</option>
-              <option value="Other">其他大模型</option>
-            </select>
-          </div>
-          <div class="flex items-end text-[11px] text-slate-400">
-            <span>💡 審計結果將即時累計至下方商業大模型天梯榜！</span>
+
+        <!-- 5 步驟指引條 -->
+        <div class="bg-purple-950/40 border border-purple-800/60 p-3 rounded-lg text-xs text-purple-200 space-y-1 font-mono">
+          <div class="text-amber-300 font-bold">📋 操作步驟：</div>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-1.5 text-[11px] pt-1">
+            <div class="bg-slate-950/70 p-1.5 rounded border border-purple-900 text-center"><span class="text-purple-400">1/5</span> 複製題幹</div>
+            <div class="bg-slate-950/70 p-1.5 rounded border border-purple-900 text-center"><span class="text-cyan-400">2/5</span> 點選模型</div>
+            <div class="bg-slate-950/70 p-1.5 rounded border border-purple-900 text-center"><span class="text-emerald-400">3/5</span> 貼入答案</div>
+            <div class="bg-slate-950/70 p-1.5 rounded border border-purple-900 text-center"><span class="text-amber-400">4/5</span> 送出審計</div>
+            <div class="bg-slate-950/70 p-1.5 rounded border border-purple-900 text-center"><span class="text-pink-400">5/5</span> 看答案對抗</div>
           </div>
         </div>
 
-        <textarea id="llm-response-input" rows="6" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-slate-200 font-mono focus:border-purple-500 focus:outline-none placeholder-slate-600" placeholder="貼入大模型的文字回覆..."></textarea>
-        <div class="flex justify-end gap-2">
+        <!-- 2/5 點選模型：一字排開按鈕組 (非下拉選單) -->
+        <div class="space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label class="block text-xs font-bold text-cyan-300 flex items-center gap-1.5">
+              <span>👉</span> <span>【2/5. 選模型】請點選您剛才測試的商業大模型品牌（必選）：</span>
+            </label>
+            <span class="text-[11px] text-slate-400">💡 戰績將自動累積至天梯榜</span>
+          </div>
+          <input type="hidden" id="selected-model-name" value="ChatGPT">
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="model-buttons-group">
+            <button type="button" onclick="selectModelBtn('ChatGPT')" id="btn-model-ChatGPT" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-purple-600 text-white border-purple-400 shadow-md">ChatGPT</button>
+            <button type="button" onclick="selectModelBtn('Claude')" id="btn-model-Claude" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Claude</button>
+            <button type="button" onclick="selectModelBtn('Gemini')" id="btn-model-Gemini" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Gemini</button>
+            <button type="button" onclick="selectModelBtn('Meta AI')" id="btn-model-MetaAI" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Meta AI</button>
+            <button type="button" onclick="selectModelBtn('DeepSeek')" id="btn-model-DeepSeek" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">DeepSeek</button>
+            <button type="button" onclick="selectModelBtn('其他大模型')" id="btn-model-Other" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">其他</button>
+          </div>
+        </div>
+
+        <!-- 3/5 貼上回覆輸入框 -->
+        <div class="space-y-1.5">
+          <label class="block text-xs font-bold text-emerald-300 flex items-center gap-1.5">
+            <span>📋</span> <span>【3/5. 貼上】請將外部大模型產出的文字回覆貼在此處：</span>
+          </label>
+          <textarea id="llm-response-input" rows="6" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-xs text-slate-200 font-mono focus:border-purple-500 focus:outline-none placeholder-slate-600" placeholder="貼入大模型的文字回覆（例如：1. 廠內資源調度... 2. 外部協力... 3. 預估成本效益...）"></textarea>
+        </div>
+
+        <div class="flex justify-between items-center pt-1">
           <button onclick="document.getElementById('track1-paste-modal').classList.add('hidden')" class="px-4 py-2 rounded text-xs bg-slate-800 hover:bg-slate-700 text-slate-300">取消</button>
-          <button onclick="auditLLMResponse()" class="px-5 py-2 rounded text-xs bg-purple-600 hover:bg-purple-500 text-white font-bold flex items-center gap-1 shadow-lg">
-            <span>⚡</span> 3/4 交答案 ➔ 前往 4/4 看結果
+          <button onclick="auditLLMResponse()" class="px-5 py-2 rounded text-xs bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold flex items-center gap-1.5 shadow-lg transform active:scale-95 transition">
+            <span>⚡</span> <strong>4/5. 送出審計</strong> ➔ <strong>5/5. 看答案</strong>
           </button>
         </div>
       </div>
@@ -291,10 +307,10 @@
       <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
         <div>
           <h2 class="text-base font-bold text-slate-100 flex items-center gap-2">
-            <span>🏆</span> 公司買的大模型實戰能力排行榜 (Enterprise Decision Leaderboard)
+            <span>🏆</span> 商業大模型實戰能力排行榜 (Enterprise Decision Leaderboard)
           </h2>
           <p class="text-xs text-slate-400 mt-0.5">
-            公司花錢買的 AI 到底能不能打？實測各大商業大模型在現場<strong>「能不能幫公司多賺錢、會不會害老闆被罰款」</strong>
+            花錢買的 AI 到底能不能打？實測各大商業大模型在現場<strong>「能不能幫公司多賺錢、會不會害老闆被罰款」</strong>
           </p>
         </div>
         <div class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-1 rounded flex items-center gap-1">
@@ -327,7 +343,7 @@
     <div id="verdict-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
       <div class="bg-slate-900 border border-cyan-800 rounded-2xl max-w-2xl w-full p-6 space-y-4 shadow-2xl">
         <div class="flex justify-between items-center">
-          <h3 class="font-bold text-cyan-400">【4/4 看結果】⚖️ 天工裁判機開箱總戰報 (The Verdict)</h3>
+          <h3 class="font-bold text-cyan-400">【5/5. 看答案】⚖️ 天工裁判機開箱總戰報 (The Verdict)</h3>
           <button onclick="document.getElementById('verdict-modal').classList.add('hidden')" class="text-slate-500 hover:text-slate-300">✕</button>
         </div>
         <div id="verdict-content" class="text-xs space-y-3 text-slate-300">
@@ -588,16 +604,39 @@
       const promptText = `【現場背景資訊】\\n${c.background}\\n\\n現場資源與人員主檔：\\n${rosterStr}\\n\\n外協與支援備案：\\n${subStr}\\n\\n【身為現場決策主管，您會如何處置這張訂單/任務？】\\n⚠️【回覆格式約束（極度重要）】：\\n請以 150 字以內極簡條列回答，嚴禁長篇大論！格式限定為以下 3 點：\\n1. 廠內資源調度與排程：\\n2. 外部協力或備案決策：\\n3. 預估成本效益與風險評估：`;
 
       navigator.clipboard.writeText(promptText).then(() => {
-        alert("✅ 【1/4 複製成功】純題幹已複製到剪貼簿（含 150 字極簡條列限制）！\\n\\n➔ 【2/4 送LLM】：請開啟 ChatGPT / Claude 貼上題目取得回覆。\\n➔ 【3/4 交答案】：回到本頁面將回答貼入輸入框。\\n➔ 【4/4 看結果】：點擊提交，裁判機將揭曉對抗戰報與天梯排名！");
+        alert("✅ 【1/5 複製成功】純題幹已複製到剪貼簿（含 150 字極簡條列限制）！\\n\\n➔ 【2/5 選模型】：請在開啟的彈窗中點選剛才送測的模型（如 ChatGPT、Claude...）\\n➔ 【3/5 貼上】：將大模型產生的回覆貼入輸入框。\\n➔ 【4/5 送出】：點擊送出審計。\\n➔ 【5/5 看答案】：天工裁判機即時揭曉對抗戰報！");
         document.getElementById('track1-paste-modal').classList.remove('hidden');
       });
     }
 
+    // 2/5 按鈕式大模型切換函數
+    function selectModelBtn(modelName) {
+      document.getElementById('selected-model-name').value = modelName;
+      // 更新按鈕樣式
+      const allBtns = document.querySelectorAll('.model-pick-btn');
+      allBtns.forEach(btn => {
+        btn.classList.remove('bg-purple-600', 'text-white', 'border-purple-400', 'shadow-md');
+        btn.classList.add('bg-slate-950', 'text-slate-300', 'border-slate-700');
+      });
+      const targetId = modelName === '其他大模型' ? 'btn-model-Other' : (modelName === 'Meta AI' ? 'btn-model-MetaAI' : 'btn-model-' + modelName);
+      const targetBtn = document.getElementById(targetId);
+      if (targetBtn) {
+        targetBtn.classList.remove('bg-slate-950', 'text-slate-300', 'border-slate-700');
+        targetBtn.classList.add('bg-purple-600', 'text-white', 'border-purple-400', 'shadow-md');
+      }
+    }
+
     // 智能審計大模型回覆（支援全部 10 大題型）
     function auditLLMResponse() {
-      const text = document.getElementById('llm-response-input').value;
-      const modelSelect = document.getElementById('llm-model-select');
-      const selectedModel = modelSelect ? modelSelect.value : "ChatGPT";
+      const text = document.getElementById('llm-response-input').value.trim();
+      const modelInput = document.getElementById('selected-model-name');
+      const selectedModel = modelInput ? modelInput.value : "ChatGPT";
+
+      if (!text) {
+        alert("⚠️ 請先完成【3/5. 貼上】：將大模型的文字回答貼入框中！");
+        return;
+      }
+
       document.getElementById('track1-paste-modal').classList.add('hidden');
       const content = document.getElementById('verdict-content');
 
