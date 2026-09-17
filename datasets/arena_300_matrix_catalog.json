@@ -1,0 +1,4802 @@
+[
+  {
+    "global_id": "SCENARIO_001",
+    "scenario_code": "CASE_SCRAP_001",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_002",
+    "scenario_code": "CASE_SCRAP_002",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_003",
+    "scenario_code": "CASE_SCRAP_003",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_004",
+    "scenario_code": "CASE_SCRAP_004",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_005",
+    "scenario_code": "CASE_SCRAP_005",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_006",
+    "scenario_code": "CASE_SCRAP_006",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_007",
+    "scenario_code": "CASE_SCRAP_007",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_008",
+    "scenario_code": "CASE_SCRAP_008",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_009",
+    "scenario_code": "CASE_SCRAP_009",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_010",
+    "scenario_code": "CASE_SCRAP_010",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_011",
+    "scenario_code": "CASE_SCRAP_011",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_012",
+    "scenario_code": "CASE_SCRAP_012",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_013",
+    "scenario_code": "CASE_SCRAP_013",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_014",
+    "scenario_code": "CASE_SCRAP_014",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_015",
+    "scenario_code": "CASE_SCRAP_015",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_016",
+    "scenario_code": "CASE_SCRAP_016",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_017",
+    "scenario_code": "CASE_SCRAP_017",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_018",
+    "scenario_code": "CASE_SCRAP_018",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_019",
+    "scenario_code": "CASE_SCRAP_019",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_020",
+    "scenario_code": "CASE_SCRAP_020",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_021",
+    "scenario_code": "CASE_SCRAP_021",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_022",
+    "scenario_code": "CASE_SCRAP_022",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_023",
+    "scenario_code": "CASE_SCRAP_023",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_024",
+    "scenario_code": "CASE_SCRAP_024",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_025",
+    "scenario_code": "CASE_SCRAP_025",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_026",
+    "scenario_code": "CASE_SCRAP_026",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_027",
+    "scenario_code": "CASE_SCRAP_027",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_028",
+    "scenario_code": "CASE_SCRAP_028",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_029",
+    "scenario_code": "CASE_SCRAP_029",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_030",
+    "scenario_code": "CASE_SCRAP_030",
+    "direction_id": 1,
+    "direction_name": "成本與良率",
+    "domain": "PROD_SCRAP",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_031",
+    "scenario_code": "CASE_CAP_001",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_032",
+    "scenario_code": "CASE_CAP_002",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_033",
+    "scenario_code": "CASE_CAP_003",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_034",
+    "scenario_code": "CASE_CAP_004",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_035",
+    "scenario_code": "CASE_CAP_005",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_036",
+    "scenario_code": "CASE_CAP_006",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_037",
+    "scenario_code": "CASE_CAP_007",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_038",
+    "scenario_code": "CASE_CAP_008",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_039",
+    "scenario_code": "CASE_CAP_009",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_040",
+    "scenario_code": "CASE_CAP_010",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_041",
+    "scenario_code": "CASE_CAP_011",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_042",
+    "scenario_code": "CASE_CAP_012",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_043",
+    "scenario_code": "CASE_CAP_013",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_044",
+    "scenario_code": "CASE_CAP_014",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_045",
+    "scenario_code": "CASE_CAP_015",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_046",
+    "scenario_code": "CASE_CAP_016",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_047",
+    "scenario_code": "CASE_CAP_017",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_048",
+    "scenario_code": "CASE_CAP_018",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_049",
+    "scenario_code": "CASE_CAP_019",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_050",
+    "scenario_code": "CASE_CAP_020",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_051",
+    "scenario_code": "CASE_CAP_021",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_052",
+    "scenario_code": "CASE_CAP_022",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_053",
+    "scenario_code": "CASE_CAP_023",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_054",
+    "scenario_code": "CASE_CAP_024",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_055",
+    "scenario_code": "CASE_CAP_025",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_056",
+    "scenario_code": "CASE_CAP_026",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_057",
+    "scenario_code": "CASE_CAP_027",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_058",
+    "scenario_code": "CASE_CAP_028",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_059",
+    "scenario_code": "CASE_CAP_029",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_060",
+    "scenario_code": "CASE_CAP_030",
+    "direction_id": 2,
+    "direction_name": "產能與交期",
+    "domain": "PROD_CAPACITY",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_061",
+    "scenario_code": "CASE_QA_001",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_062",
+    "scenario_code": "CASE_QA_002",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_063",
+    "scenario_code": "CASE_QA_003",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_064",
+    "scenario_code": "CASE_QA_004",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_065",
+    "scenario_code": "CASE_QA_005",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_066",
+    "scenario_code": "CASE_QA_006",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_067",
+    "scenario_code": "CASE_QA_007",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_068",
+    "scenario_code": "CASE_QA_008",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_069",
+    "scenario_code": "CASE_QA_009",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_070",
+    "scenario_code": "CASE_QA_010",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_071",
+    "scenario_code": "CASE_QA_011",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_072",
+    "scenario_code": "CASE_QA_012",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_073",
+    "scenario_code": "CASE_QA_013",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_074",
+    "scenario_code": "CASE_QA_014",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_075",
+    "scenario_code": "CASE_QA_015",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_076",
+    "scenario_code": "CASE_QA_016",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_077",
+    "scenario_code": "CASE_QA_017",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_078",
+    "scenario_code": "CASE_QA_018",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_079",
+    "scenario_code": "CASE_QA_019",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_080",
+    "scenario_code": "CASE_QA_020",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_081",
+    "scenario_code": "CASE_QA_021",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_082",
+    "scenario_code": "CASE_QA_022",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_083",
+    "scenario_code": "CASE_QA_023",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_084",
+    "scenario_code": "CASE_QA_024",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_085",
+    "scenario_code": "CASE_QA_025",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_086",
+    "scenario_code": "CASE_QA_026",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_087",
+    "scenario_code": "CASE_QA_027",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_088",
+    "scenario_code": "CASE_QA_028",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_089",
+    "scenario_code": "CASE_QA_029",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_090",
+    "scenario_code": "CASE_QA_030",
+    "direction_id": 3,
+    "direction_name": "品質系統",
+    "domain": "QA_COMPLIANCE",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_091",
+    "scenario_code": "CASE_SCM_001",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_092",
+    "scenario_code": "CASE_SCM_002",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_093",
+    "scenario_code": "CASE_SCM_003",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_094",
+    "scenario_code": "CASE_SCM_004",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_095",
+    "scenario_code": "CASE_SCM_005",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_096",
+    "scenario_code": "CASE_SCM_006",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_097",
+    "scenario_code": "CASE_SCM_007",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_098",
+    "scenario_code": "CASE_SCM_008",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_099",
+    "scenario_code": "CASE_SCM_009",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_100",
+    "scenario_code": "CASE_SCM_010",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_101",
+    "scenario_code": "CASE_SCM_011",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_102",
+    "scenario_code": "CASE_SCM_012",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_103",
+    "scenario_code": "CASE_SCM_013",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_104",
+    "scenario_code": "CASE_SCM_014",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_105",
+    "scenario_code": "CASE_SCM_015",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_106",
+    "scenario_code": "CASE_SCM_016",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_107",
+    "scenario_code": "CASE_SCM_017",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_108",
+    "scenario_code": "CASE_SCM_018",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_109",
+    "scenario_code": "CASE_SCM_019",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_110",
+    "scenario_code": "CASE_SCM_020",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_111",
+    "scenario_code": "CASE_SCM_021",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_112",
+    "scenario_code": "CASE_SCM_022",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_113",
+    "scenario_code": "CASE_SCM_023",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_114",
+    "scenario_code": "CASE_SCM_024",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_115",
+    "scenario_code": "CASE_SCM_025",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_116",
+    "scenario_code": "CASE_SCM_026",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_117",
+    "scenario_code": "CASE_SCM_027",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_118",
+    "scenario_code": "CASE_SCM_028",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_119",
+    "scenario_code": "CASE_SCM_029",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_120",
+    "scenario_code": "CASE_SCM_030",
+    "direction_id": 4,
+    "direction_name": "供應鏈與採購",
+    "domain": "SUPPLY_CHAIN",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_121",
+    "scenario_code": "CASE_MC_001",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_122",
+    "scenario_code": "CASE_MC_002",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_123",
+    "scenario_code": "CASE_MC_003",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_124",
+    "scenario_code": "CASE_MC_004",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_125",
+    "scenario_code": "CASE_MC_005",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_126",
+    "scenario_code": "CASE_MC_006",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_127",
+    "scenario_code": "CASE_MC_007",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_128",
+    "scenario_code": "CASE_MC_008",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_129",
+    "scenario_code": "CASE_MC_009",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_130",
+    "scenario_code": "CASE_MC_010",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_131",
+    "scenario_code": "CASE_MC_011",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_132",
+    "scenario_code": "CASE_MC_012",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_133",
+    "scenario_code": "CASE_MC_013",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_134",
+    "scenario_code": "CASE_MC_014",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_135",
+    "scenario_code": "CASE_MC_015",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_136",
+    "scenario_code": "CASE_MC_016",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_137",
+    "scenario_code": "CASE_MC_017",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_138",
+    "scenario_code": "CASE_MC_018",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_139",
+    "scenario_code": "CASE_MC_019",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_140",
+    "scenario_code": "CASE_MC_020",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_141",
+    "scenario_code": "CASE_MC_021",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_142",
+    "scenario_code": "CASE_MC_022",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_143",
+    "scenario_code": "CASE_MC_023",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_144",
+    "scenario_code": "CASE_MC_024",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_145",
+    "scenario_code": "CASE_MC_025",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_146",
+    "scenario_code": "CASE_MC_026",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_147",
+    "scenario_code": "CASE_MC_027",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_148",
+    "scenario_code": "CASE_MC_028",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_149",
+    "scenario_code": "CASE_MC_029",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_150",
+    "scenario_code": "CASE_MC_030",
+    "direction_id": 5,
+    "direction_name": "設備與自動化",
+    "domain": "MACHINE_MAINT",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_151",
+    "scenario_code": "CASE_HR_001",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_152",
+    "scenario_code": "CASE_HR_002",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_153",
+    "scenario_code": "CASE_HR_003",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_154",
+    "scenario_code": "CASE_HR_004",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_155",
+    "scenario_code": "CASE_HR_005",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_156",
+    "scenario_code": "CASE_HR_006",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_157",
+    "scenario_code": "CASE_HR_007",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_158",
+    "scenario_code": "CASE_HR_008",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_159",
+    "scenario_code": "CASE_HR_009",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_160",
+    "scenario_code": "CASE_HR_010",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_161",
+    "scenario_code": "CASE_HR_011",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_162",
+    "scenario_code": "CASE_HR_012",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_163",
+    "scenario_code": "CASE_HR_013",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_164",
+    "scenario_code": "CASE_HR_014",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_165",
+    "scenario_code": "CASE_HR_015",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_166",
+    "scenario_code": "CASE_HR_016",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_167",
+    "scenario_code": "CASE_HR_017",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_168",
+    "scenario_code": "CASE_HR_018",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_169",
+    "scenario_code": "CASE_HR_019",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_170",
+    "scenario_code": "CASE_HR_020",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_171",
+    "scenario_code": "CASE_HR_021",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_172",
+    "scenario_code": "CASE_HR_022",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_173",
+    "scenario_code": "CASE_HR_023",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_174",
+    "scenario_code": "CASE_HR_024",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_175",
+    "scenario_code": "CASE_HR_025",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_176",
+    "scenario_code": "CASE_HR_026",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_177",
+    "scenario_code": "CASE_HR_027",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_178",
+    "scenario_code": "CASE_HR_028",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_179",
+    "scenario_code": "CASE_HR_029",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_180",
+    "scenario_code": "CASE_HR_030",
+    "direction_id": 6,
+    "direction_name": "人員與領導",
+    "domain": "HR_ROSTER",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_181",
+    "scenario_code": "CASE_CUST_001",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_182",
+    "scenario_code": "CASE_CUST_002",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_183",
+    "scenario_code": "CASE_CUST_003",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_184",
+    "scenario_code": "CASE_CUST_004",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_185",
+    "scenario_code": "CASE_CUST_005",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_186",
+    "scenario_code": "CASE_CUST_006",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_187",
+    "scenario_code": "CASE_CUST_007",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_188",
+    "scenario_code": "CASE_CUST_008",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_189",
+    "scenario_code": "CASE_CUST_009",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_190",
+    "scenario_code": "CASE_CUST_010",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_191",
+    "scenario_code": "CASE_CUST_011",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_192",
+    "scenario_code": "CASE_CUST_012",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_193",
+    "scenario_code": "CASE_CUST_013",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_194",
+    "scenario_code": "CASE_CUST_014",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_195",
+    "scenario_code": "CASE_CUST_015",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_196",
+    "scenario_code": "CASE_CUST_016",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_197",
+    "scenario_code": "CASE_CUST_017",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_198",
+    "scenario_code": "CASE_CUST_018",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_199",
+    "scenario_code": "CASE_CUST_019",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_200",
+    "scenario_code": "CASE_CUST_020",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_201",
+    "scenario_code": "CASE_CUST_021",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_202",
+    "scenario_code": "CASE_CUST_022",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_203",
+    "scenario_code": "CASE_CUST_023",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_204",
+    "scenario_code": "CASE_CUST_024",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_205",
+    "scenario_code": "CASE_CUST_025",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_206",
+    "scenario_code": "CASE_CUST_026",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_207",
+    "scenario_code": "CASE_CUST_027",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_208",
+    "scenario_code": "CASE_CUST_028",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_209",
+    "scenario_code": "CASE_CUST_029",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_210",
+    "scenario_code": "CASE_CUST_030",
+    "direction_id": 7,
+    "direction_name": "客訴與稽核",
+    "domain": "CUSTOMER_AUDIT",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_211",
+    "scenario_code": "CASE_TRIZ_001",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_212",
+    "scenario_code": "CASE_TRIZ_002",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_213",
+    "scenario_code": "CASE_TRIZ_003",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_214",
+    "scenario_code": "CASE_TRIZ_004",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_215",
+    "scenario_code": "CASE_TRIZ_005",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_216",
+    "scenario_code": "CASE_TRIZ_006",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_217",
+    "scenario_code": "CASE_TRIZ_007",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_218",
+    "scenario_code": "CASE_TRIZ_008",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_219",
+    "scenario_code": "CASE_TRIZ_009",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_220",
+    "scenario_code": "CASE_TRIZ_010",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_221",
+    "scenario_code": "CASE_TRIZ_011",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_222",
+    "scenario_code": "CASE_TRIZ_012",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_223",
+    "scenario_code": "CASE_TRIZ_013",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_224",
+    "scenario_code": "CASE_TRIZ_014",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_225",
+    "scenario_code": "CASE_TRIZ_015",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_226",
+    "scenario_code": "CASE_TRIZ_016",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_227",
+    "scenario_code": "CASE_TRIZ_017",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_228",
+    "scenario_code": "CASE_TRIZ_018",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_229",
+    "scenario_code": "CASE_TRIZ_019",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_230",
+    "scenario_code": "CASE_TRIZ_020",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_231",
+    "scenario_code": "CASE_TRIZ_021",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_232",
+    "scenario_code": "CASE_TRIZ_022",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_233",
+    "scenario_code": "CASE_TRIZ_023",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_234",
+    "scenario_code": "CASE_TRIZ_024",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_235",
+    "scenario_code": "CASE_TRIZ_025",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_236",
+    "scenario_code": "CASE_TRIZ_026",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_237",
+    "scenario_code": "CASE_TRIZ_027",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_238",
+    "scenario_code": "CASE_TRIZ_028",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_239",
+    "scenario_code": "CASE_TRIZ_029",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_240",
+    "scenario_code": "CASE_TRIZ_030",
+    "direction_id": 8,
+    "direction_name": "精實與改善",
+    "domain": "TRIZ_METHOD",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_241",
+    "scenario_code": "CASE_MGMT_001",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_242",
+    "scenario_code": "CASE_MGMT_002",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_243",
+    "scenario_code": "CASE_MGMT_003",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_244",
+    "scenario_code": "CASE_MGMT_004",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_245",
+    "scenario_code": "CASE_MGMT_005",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_246",
+    "scenario_code": "CASE_MGMT_006",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_247",
+    "scenario_code": "CASE_MGMT_007",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_248",
+    "scenario_code": "CASE_MGMT_008",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_249",
+    "scenario_code": "CASE_MGMT_009",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_250",
+    "scenario_code": "CASE_MGMT_010",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_251",
+    "scenario_code": "CASE_MGMT_011",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_252",
+    "scenario_code": "CASE_MGMT_012",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_253",
+    "scenario_code": "CASE_MGMT_013",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_254",
+    "scenario_code": "CASE_MGMT_014",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_255",
+    "scenario_code": "CASE_MGMT_015",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_256",
+    "scenario_code": "CASE_MGMT_016",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_257",
+    "scenario_code": "CASE_MGMT_017",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_258",
+    "scenario_code": "CASE_MGMT_018",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_259",
+    "scenario_code": "CASE_MGMT_019",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_260",
+    "scenario_code": "CASE_MGMT_020",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_261",
+    "scenario_code": "CASE_MGMT_021",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_262",
+    "scenario_code": "CASE_MGMT_022",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_263",
+    "scenario_code": "CASE_MGMT_023",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_264",
+    "scenario_code": "CASE_MGMT_024",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_265",
+    "scenario_code": "CASE_MGMT_025",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_266",
+    "scenario_code": "CASE_MGMT_026",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_267",
+    "scenario_code": "CASE_MGMT_027",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_268",
+    "scenario_code": "CASE_MGMT_028",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_269",
+    "scenario_code": "CASE_MGMT_029",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_270",
+    "scenario_code": "CASE_MGMT_030",
+    "direction_id": 9,
+    "direction_name": "跨部門與老闆",
+    "domain": "INTER_DEPT",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_271",
+    "scenario_code": "CASE_CRISIS_001",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 1,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_272",
+    "scenario_code": "CASE_CRISIS_002",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 2,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_273",
+    "scenario_code": "CASE_CRISIS_003",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 3,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_274",
+    "scenario_code": "CASE_CRISIS_004",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 4,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_275",
+    "scenario_code": "CASE_CRISIS_005",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 5,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_276",
+    "scenario_code": "CASE_CRISIS_006",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 6,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_277",
+    "scenario_code": "CASE_CRISIS_007",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 7,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_278",
+    "scenario_code": "CASE_CRISIS_008",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 8,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_279",
+    "scenario_code": "CASE_CRISIS_009",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 9,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_280",
+    "scenario_code": "CASE_CRISIS_010",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 10,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_281",
+    "scenario_code": "CASE_CRISIS_011",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 11,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_282",
+    "scenario_code": "CASE_CRISIS_012",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 12,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_283",
+    "scenario_code": "CASE_CRISIS_013",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 13,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_284",
+    "scenario_code": "CASE_CRISIS_014",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 14,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_285",
+    "scenario_code": "CASE_CRISIS_015",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 15,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_286",
+    "scenario_code": "CASE_CRISIS_016",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 16,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_287",
+    "scenario_code": "CASE_CRISIS_017",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 17,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_288",
+    "scenario_code": "CASE_CRISIS_018",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 18,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_289",
+    "scenario_code": "CASE_CRISIS_019",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 19,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_290",
+    "scenario_code": "CASE_CRISIS_020",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 20,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_291",
+    "scenario_code": "CASE_CRISIS_021",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 21,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_292",
+    "scenario_code": "CASE_CRISIS_022",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 22,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_293",
+    "scenario_code": "CASE_CRISIS_023",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 23,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_294",
+    "scenario_code": "CASE_CRISIS_024",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 24,
+    "trap_b_type_2": {
+      "template_id": 4,
+      "name": "絕對化詞語"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_295",
+    "scenario_code": "CASE_CRISIS_025",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 25,
+    "trap_b_type_2": {
+      "template_id": 5,
+      "name": "因果倒置型"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_296",
+    "scenario_code": "CASE_CRISIS_026",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 26,
+    "trap_b_type_2": {
+      "template_id": 7,
+      "name": "偷換主詞型"
+    },
+    "trap_c_type_1": {
+      "template_id": 1,
+      "name": "正確但不相關"
+    }
+  },
+  {
+    "global_id": "SCENARIO_297",
+    "scenario_code": "CASE_CRISIS_027",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 27,
+    "trap_b_type_2": {
+      "template_id": 8,
+      "name": "數字/單位陷阱型"
+    },
+    "trap_c_type_1": {
+      "template_id": 6,
+      "name": "以偏概全型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_298",
+    "scenario_code": "CASE_CRISIS_028",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 28,
+    "trap_b_type_2": {
+      "template_id": 12,
+      "name": "短期當長期型"
+    },
+    "trap_c_type_1": {
+      "template_id": 9,
+      "name": "責任外包型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_299",
+    "scenario_code": "CASE_CRISIS_029",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 29,
+    "trap_b_type_2": {
+      "template_id": 2,
+      "name": "部分正確"
+    },
+    "trap_c_type_1": {
+      "template_id": 10,
+      "name": "經驗光環型"
+    }
+  },
+  {
+    "global_id": "SCENARIO_300",
+    "scenario_code": "CASE_CRISIS_030",
+    "direction_id": 10,
+    "direction_name": "危機與變革",
+    "domain": "CRISIS_SAFETY",
+    "sub_index": 30,
+    "trap_b_type_2": {
+      "template_id": 3,
+      "name": "把充分當必要"
+    },
+    "trap_c_type_1": {
+      "template_id": 11,
+      "name": "假二選一型"
+    }
+  }
+]

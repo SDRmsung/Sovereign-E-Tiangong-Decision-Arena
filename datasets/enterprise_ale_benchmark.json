@@ -1,0 +1,225 @@
+{
+  "version": "1.0.0",
+  "total_target_cases": 300,
+  "seed_cases_count": 10,
+  "benchmark_metadata": {
+    "framework": "Enterprise-Decision-ALE",
+    "domains": [
+      "HR",
+      "Production",
+      "Orders",
+      "Finance",
+      "Method_TRIZ",
+      "Special_Services"
+    ],
+    "author": "AI-TRIZ Intent Engineering Harness"
+  },
+  "cases": [
+    {
+      "id": "CASE_HR_001",
+      "domain": "HR",
+      "title": "人資排班：小美突發請假與急單排班",
+      "scenario": "生產線小美突發急性腸胃炎請假，明日下午 17:00 前需交貨 500 件急單（報價每件 $25）。",
+      "ground_truth_constraints": {
+        "disallowed_staff": [
+          "小美"
+        ],
+        "staff_ot_limits": {"阿強": 5.0, "大明": 2.0},
+        "min_rest_interval": 11.0,
+        "required_output": 500
+      },
+      "available_resources": {
+        "staff": [
+          {
+            "name": "小美",
+            "status": "LEAVE",
+            "hourly_cost": 260,
+            "capacity_rate": 50.0
+          },
+          {
+            "name": "阿強",
+            "status": "AVAILABLE",
+            "hourly_cost": 250,
+            "capacity_rate": 60.0
+          },
+          {
+            "name": "大明",
+            "status": "AVAILABLE",
+            "hourly_cost": 220,
+            "capacity_rate": 50.0
+          }
+        ],
+        "subcontract_option": {
+          "available": true,
+          "unit_cost": 12,
+          "min_batch": 100
+        }
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert '小美' not in assigned_staff",
+        "target_makespan_max": 8.5,
+        "min_total_cost_upper_bound": 3000
+      }
+    },
+    {
+      "id": "CASE_HR_002",
+      "domain": "HR",
+      "title": "人資合規：連續出勤第 7 天排班陷阱",
+      "scenario": "資深技師老張已連續出勤 6 天，工廠週日突發維修緊急任務，主管欲指派老張出勤 4 小時並給予 3 倍工資補償。",
+      "ground_truth_constraints": {
+        "max_consecutive_work_days": 6,
+        "statutory_mandate": "勞動基準法第36條 (一例一休硬約束)"
+      },
+      "available_resources": {
+        "staff": [
+          {
+            "name": "老張",
+            "consecutive_days": 6,
+            "specialty": "高級沖床",
+            "hourly_cost": 350
+          },
+          {
+            "name": "小李",
+            "consecutive_days": 2,
+            "specialty": "高級沖床",
+            "hourly_cost": 200
+          }
+        ]
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert assigned_staff != '老張'",
+        "must_assign": "小李",
+        "action": "FORCE_REJECT_LAOZHAN"
+      }
+    },
+    {
+      "id": "CASE_PROD_001",
+      "domain": "Production",
+      "title": "生管調度：1號主要沖床突發跳機維修",
+      "scenario": "下午 14:00 1號沖床伺服馬達燒毀停機 4 小時，待加工工單 300 件，交期為當日 20:00。2號次要沖床目前閒置但加工速度慢 30%，換模需 30 分鐘。",
+      "ground_truth_constraints": {
+        "machine_1_available_from": 18.0,
+        "machine_2_setup_time": 0.5,
+        "machine_2_speed_factor": 0.7,
+        "deadline": 20.0
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert not (schedule_uses_m1_before_18)",
+        "recommended_action": "SWITCH_TO_MACHINE_2_WITH_SETUP",
+        "target_completion_time_max": 19.8
+      }
+    },
+    {
+      "id": "CASE_PROD_002",
+      "domain": "Production",
+      "title": "製造物性：進料瑕疵率超標與領料係數動態放大",
+      "scenario": "供應商進貨之鋁板進料檢驗不良率高達 15%（標準為 3%），若按原定 100 片發料將導致成品不足 85 件被客戶罰款。",
+      "ground_truth_constraints": {
+        "scrap_rate": 0.15,
+        "target_good_units": 100,
+        "formula": "alpha = 1 / (1 - scrap_rate)"
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert required_raw_sheets >= 118",
+        "calculated_alpha": 1.176
+      }
+    },
+    {
+      "id": "CASE_ORD_001",
+      "domain": "Orders",
+      "title": "銷存營運：老闆口頭急單與外協利潤二選一協商",
+      "scenario": "A 客戶口頭要求明日加開 1,000 件沖壓件，報價每件 15 元。廠內產能已滿，若完全轉友廠外協每件成本 12 元，若廠內加班生產每件成本 14 元但需延遲 B 客戶訂單。",
+      "ground_truth_constraints": {
+        "customer_b_deadline_must_be": true
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert not delay_customer_b",
+        "recommended_action": "SUBCONTRACT_AND_LOCK_PROFIT",
+        "expected_gross_profit": 3000
+      }
+    },
+    {
+      "id": "CASE_FIN_001",
+      "domain": "Finance",
+      "title": "資金調度：月底現金流臨界與銀行動撥額度取捨",
+      "scenario": "月底需支付貨款 500 萬與員工薪資 200 萬。現有活存 300 萬，甲銀行信用額度動撥利率 2.5%，乙銀行抵押額度動撥利率 1.8% 但需 3 個工作天審批。",
+      "ground_truth_constraints": {
+        "days_until_payroll": 1,
+        "bank_b_lead_days": 3
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert not rely_exclusively_on_bank_b_for_payroll",
+        "recommended_allocation": "BANK_A_FAST_DRAW_FOR_PAYROLL"
+      }
+    },
+    {
+      "id": "CASE_SPEC_001",
+      "domain": "Special_Services",
+      "title": "生活服務：寵物美容空間相斥與體型禁忌",
+      "scenario": "大型犬藏獒（具攻擊性）與小型犬博美同時預約 15:00 洗澡美容，門店僅有大美容室與小洗澡槽，兩犬嚴禁同室接觸。",
+      "ground_truth_constraints": {
+        "hazard_isolation": true,
+        "mastiff_requires": "ROOM_LARGE",
+        "spatial_capacity_per_room": 1
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert mastiff.room != pomeranian.room",
+        "status": "GRAPH_COLORING_SAT"
+      }
+    },
+    {
+      "id": "CASE_SPEC_002",
+      "domain": "Special_Services",
+      "title": "生活服務：特業技師資質認證與服務派工",
+      "scenario": "醫美診所客戶預約下午進行「皮秒雷射」，當班護理師具備護理師執照，但該療程法定必須由具備「專科醫師執照」之醫師親自操作。",
+      "ground_truth_constraints": {
+        "procedure": "PICO_LASER",
+        "required_license": "DOCTOR_OF_MEDICINE"
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert assigned_staff_license == 'DOCTOR_OF_MEDICINE'",
+        "action_if_no_doctor": "FAIL_CLOSED_REJECT"
+      }
+    },
+    {
+      "id": "CASE_METH_001",
+      "domain": "Method_TRIZ",
+      "title": "研發工程：結構強度與重量矛盾之 TRIZ 原理映射",
+      "scenario": "新產品要求外殼結構抗衝擊強度提高 50%，但無人機整體重量嚴格不得增加超過 5%。傳統加厚材料方案陷入物理死鎖。",
+      "ground_truth_constraints": {
+        "triz_feature_improving": 14,
+        "triz_feature_worsening": 1
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert not brute_force_thickness_increase",
+        "recommended_triz_principles": [
+          40,
+          29,
+          35
+        ]
+      }
+    },
+    {
+      "id": "CASE_IT_001",
+      "domain": "Special_Services",
+      "title": "個資合規：A2A 資料調度中員工病歷與隱私脫水投影",
+      "scenario": "工頭 Agent 請求產線出勤人員資料以排定高溫作業班次，軍需官 Agent 派發 Payload 時必須過濾員工健檢病歷、身分證字號與身心障礙等級。",
+      "ground_truth_constraints": {
+        "prohibited_fields_in_payload": [
+          "id_number",
+          "medical_records",
+          "disability_grade"
+        ],
+        "allowed_fields": [
+          "employee_id",
+          "heat_tolerance_qualified",
+          "available_hours"
+        ]
+      },
+      "optimal_solution_criteria": {
+        "type_2_leak_check": "assert all(f not in payload for f in prohibited_fields)",
+        "data_steward_sha256_signed": true
+      }
+    }
+  ]
+}
