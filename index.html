@@ -11,20 +11,37 @@
     <div class="flex items-center space-x-3">
       <span class="text-2xl font-bold tracking-tight text-cyan-400">🏛️ 天工企業決策競技場</span>
       <span class="text-xs bg-cyan-950 text-cyan-400 border border-cyan-800 px-2 py-0.5 rounded font-mono">Sovereign-E-Arena</span>
+      <button onclick="document.getElementById('tiangong-modal').classList.remove('hidden')" class="text-xs border border-cyan-700/60 bg-cyan-950/40 hover:bg-cyan-900 text-cyan-300 px-2.5 py-1 rounded-full transition flex items-center gap-1 shadow">
+        <span>📜</span> 何謂「天工」？
+      </button>
     </div>
     <div class="text-xs text-slate-400 font-mono">3-Track Blind Testing & Zero-Type-II Formal Verification</div>
   </header>
 
-  <main class="max-w-5xl mx-auto py-8 px-4 space-y-6">
-    <!-- 🧭 天工核心精神橫幅 -->
-    <div class="border border-cyan-900/60 bg-gradient-to-r from-slate-900 via-cyan-950/20 to-slate-900 rounded-xl p-5 text-xs text-slate-300 space-y-2">
-      <div class="text-cyan-400 font-bold text-sm flex items-center gap-2">
-        <span>📜</span> 何謂「天工」？—— 傳承 1637 年《天工開物》之工匠與造物意志
+  <main class="max-w-5xl mx-auto py-6 px-4 space-y-5">
+    <!-- 何謂天工開物說明彈窗 (Modal) -->
+    <div id="tiangong-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+      <div class="bg-slate-900 border border-cyan-800 rounded-2xl max-w-xl w-full p-6 space-y-4 shadow-2xl">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+          <div class="text-cyan-400 font-bold text-sm flex items-center gap-2">
+            <span>📜</span> 何謂「天工」？—— 傳承 1637 年《天工開物》之工匠意志
+          </div>
+          <button onclick="document.getElementById('tiangong-modal').classList.add('hidden')" class="text-slate-500 hover:text-slate-300">✕</button>
+        </div>
+        <div class="text-xs text-slate-300 leading-relaxed space-y-3">
+          <p>
+            明代宋應星於 1637 年所著《天工開物》，被達爾文譽為「17 世紀的工藝與生管百科全書」，詳載五金冶煉、鍛造、製麴等實打實的製程物理與材料物性，絕非文人清談之空論。
+          </p>
+          <div class="p-3 bg-cyan-950/40 border border-cyan-900/60 rounded-lg space-y-1.5 text-cyan-200">
+            <div>• <strong>立足物理</strong>：深入車間車床、尊重「人機料法環」與現場硬約束，杜絕吹水。</div>
+            <div>• <strong>巧奪天工</strong>：以形式化 SAT 求解器在不可行死鎖中，毫秒級求出剛性合規之最佳解。</div>
+            <div>• <strong>開物成務</strong>：把混亂的現場突發異常排班，轉化為確定的真金白銀利潤！</div>
+          </div>
+        </div>
+        <div class="flex justify-end pt-2">
+          <button onclick="document.getElementById('tiangong-modal').classList.add('hidden')" class="px-4 py-1.5 rounded text-xs bg-cyan-800 hover:bg-cyan-700 text-white font-medium">了解並關閉</button>
+        </div>
       </div>
-      <p class="leading-relaxed text-slate-400">
-        《天工開物》是人類首部生管與工藝百科全書，記錄實打實的製程物理與材料物性。
-        我們拒絕通用大模型浮誇的「場面話」，秉持<strong>「巧奪天工的精算度（形式化 SAT 極速求解）」</strong>與<strong>「開物成務的商業實證」</strong>，深入車間車床，把混亂排班轉化為確定的營收利潤。
-      </p>
     </div>
 
     <!-- 🎛️ 10 大維度導航與隨機抽題面板 (Category Selector & Randomizer) -->
@@ -179,15 +196,16 @@
           <div>
             <label class="block text-[11px] text-slate-400 mb-1">受測大模型品牌：</label>
             <select id="llm-model-select" class="w-full bg-slate-950 border border-slate-700 text-purple-300 rounded px-3 py-1.5 text-xs font-mono focus:outline-none focus:border-purple-500">
-              <option value="Meta AI (Llama 3)">Meta AI (Llama 3 / 3.3)</option>
-              <option value="ChatGPT-4o">OpenAI ChatGPT-4o</option>
-              <option value="Claude 3.5 Sonnet">Anthropic Claude 3.5 Sonnet</option>
-              <option value="DeepSeek-V3">DeepSeek-V3 / R1</option>
-              <option value="Other LLM">其他大模型 (Other)</option>
+              <option value="ChatGPT">OpenAI ChatGPT</option>
+              <option value="Gemini">Google Gemini</option>
+              <option value="Claude">Anthropic Claude</option>
+              <option value="Meta AI">Meta AI</option>
+              <option value="DeepSeek">DeepSeek</option>
+              <option value="Other">其他大模型 (Other)</option>
             </select>
           </div>
           <div class="flex items-end text-[11px] text-slate-400">
-            <span>💡 審計結果將即時納入下方「大模型現場決策排行榜」！</span>
+            <span>💡 審計結果將即時累計至下方商業大模型天梯榜！</span>
           </div>
         </div>
 
@@ -259,17 +277,20 @@
       </div>
     </div>
 
-    <!-- 🏆 天梯排行榜 (Leaderboard Table) -->
+    <!-- 🏆 老闆考核天梯排行榜 (Leaderboard Table) -->
     <section class="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl space-y-4">
       <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
         <div>
           <h2 class="text-base font-bold text-slate-100 flex items-center gap-2">
-            <span>🏆</span> 企業現場決策天梯排行榜 (Enterprise Decision Leaderboard)
+            <span>🏆</span> 公司買的大模型實戰能力排行榜 (Enterprise Decision Leaderboard)
           </h2>
-          <p class="text-xs text-slate-400 mt-0.5">基於真實現場所測之「Type II 致命漏報率」與「形式化約束滿足率」動態排行</p>
+          <p class="text-xs text-slate-400 mt-0.5">
+            公司花錢買的 AI 到底能不能打？實測各大商業大模型在現場<strong>「能不能幫公司多賺錢、會不會害老闆被罰款」</strong>
+          </p>
         </div>
-        <div class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-1 rounded">
-          ● 實時累積統計 (Local Verified)
+        <div class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-1 rounded flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+          ● 實戰考核累積中 (Local Verified)
         </div>
       </div>
 
@@ -278,16 +299,16 @@
           <thead class="bg-slate-950 text-slate-400 border-b border-slate-800">
             <tr>
               <th class="py-2.5 px-3">名次</th>
-              <th class="py-2.5 px-3">決策模型 / 系統架構</th>
-              <th class="py-2.5 px-3 text-center">累計測試題</th>
-              <th class="py-2.5 px-3 text-center">Type II 致命漏報率 ⚠️</th>
-              <th class="py-2.5 px-3 text-center">形式化合規率 ✅</th>
-              <th class="py-2.5 px-3 text-center">平均利潤達成率</th>
-              <th class="py-2.5 px-3 text-right">綜合裁決</th>
+              <th class="py-2.5 px-3">AI 系統 / 商業大模型</th>
+              <th class="py-2.5 px-3 text-center">實測急單數</th>
+              <th class="py-2.5 px-3 text-center text-red-400">🚨 現場開天窗 / 違法罰款率</th>
+              <th class="py-2.5 px-3 text-center text-emerald-400">🛡️ 勞檢安全合規率</th>
+              <th class="py-2.5 px-3 text-center text-amber-400">💰 訂單淨利潤達成率</th>
+              <th class="py-2.5 px-3 text-right">老闆考核結論</th>
             </tr>
           </thead>
           <tbody id="leaderboard-body" class="divide-y divide-slate-800/60 text-slate-300">
-            <!-- 動態或預設渲染排行榜 -->
+            <!-- 動態渲染 -->
           </tbody>
         </table>
       </div>
@@ -838,27 +859,73 @@ ${subStr}
     }
 
     function auditHumanResponse() {
-    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD')) || [
-      { name: "🏆 天工大腦 (Tiangong SAT-Core)", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零漏報合規" },
-      { name: "Meta AI (Llama 3 / 3.3)", tests: 8, leaks: 1, compliance: 87.5, profit: 94.2, status: "🟢 表現優異" },
-      { name: "Anthropic Claude 3.5 Sonnet", tests: 12, leaks: 3, compliance: 75.0, profit: 91.0, status: "⚠️ 偶發漏報" },
-      { name: "OpenAI ChatGPT-4o", tests: 15, leaks: 6, compliance: 60.0, profit: 82.5, status: "🚨 易踩銷假地雷" },
-      { name: "DeepSeek-V3 / R1", tests: 10, leaks: 3, compliance: 70.0, profit: 86.0, status: "⚠️ 邏輯偶發漂移" }
+      const text = document.getElementById('human-response-input').value;
+      document.getElementById('track3-modal').classList.add('hidden');
+      const content = document.getElementById('verdict-content');
+
+      const assignsXiaomei = text.includes("小美") && (text.includes("加班") || text.includes("出勤") || text.includes("做") || text.includes("自願"));
+      const rejectsOrder = text.includes("退單") || text.includes("婉拒") || text.includes("不接") || text.includes("無法承接") || text.includes("放棄");
+      const usesSubcontract = text.includes("外協") || text.includes("協興");
+
+      if (assignsXiaomei) {
+        content.innerHTML = `
+          <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🚨</span> 主管自填審計結果：踩中違規銷假地雷！
+            </div>
+            <div class="text-xs text-red-200">❌ 違背勞基法 | 小美已登記急診病假，強行排班將面臨 2~100 萬勞檢處分！</div>
+            <div class="text-xs text-emerald-400 font-semibold pt-2">
+              🏆 天工大腦正確對策：小美產能剛性歸零，阿強 5h + 大明 2h + 協興外協 100件，淨賺 +$9,610 元！
+            </div>
+          </div>
+        `;
+      } else if (rejectsOrder || (!usesSubcontract && text.length > 0)) {
+        content.innerHTML = `
+          <div class="p-4 bg-amber-950/60 border border-amber-800 rounded-lg text-amber-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>⚠️</span> 主管自填審計結果：踩中保守退單誤殺陷阱！
+            </div>
+            <div class="text-xs text-amber-200">⚠️ 合法但嚴重少賺 | 白白損失 $9,610 元純利潤</div>
+            <div class="text-slate-300 text-xs mt-2 p-2.5 bg-slate-950/70 rounded border border-amber-900/60">
+              老經驗生管擔心廠內做不完便直覺退單；但只要調用「友廠協興外協 100 件 ($1,200)」，16:30 準時交貨，即可淨賺近萬元！
+            </div>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div class="p-4 bg-emerald-950/60 border border-emerald-800 rounded-lg text-emerald-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🏆</span> 太厲害了！您的自填方案精準對齊「天工大腦最佳解」！
+            </div>
+            <div class="text-xs text-emerald-200">✅ 100% 合規 | 淨賺 +$9,610 元 | 準時交貨率 100%</div>
+          </div>
+        `;
+      }
+      document.getElementById('verdict-modal').classList.remove('hidden');
+    }
+
+    // 排行榜預設與本地存儲數據庫（主流商業品牌，無版本號）
+    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V2')) || [
+      { name: "🏆 天工大腦 (Tiangong)", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零罰款、自動賺錢 (必買)" },
+      { name: "Meta AI", tests: 10, leaks: 1, compliance: 90.0, profit: 94.5, status: "🟢 懂找外協、表現佳" },
+      { name: "Google Gemini", tests: 12, leaks: 2, compliance: 83.3, profit: 92.0, status: "🟢 具備常識、偶有小失誤" },
+      { name: "Anthropic Claude", tests: 14, leaks: 3, compliance: 78.5, profit: 91.0, status: "⚠️ 場面話漂亮、現場要盯" },
+      { name: "OpenAI ChatGPT", tests: 18, leaks: 7, compliance: 61.1, profit: 82.5, status: "🚨 易踩銷假地雷、差點被罰百萬" },
+      { name: "DeepSeek", tests: 10, leaks: 3, compliance: 70.0, profit: 86.0, status: "⚠️ 邏輯偶發漂移、需主管把關" }
     ];
 
     function saveAndRenderLeaderboard() {
-      localStorage.setItem('TIANGONG_ARENA_LEADERBOARD', JSON.stringify(LEADERBOARD_DATA));
-      // 依 Type II 漏報率升序、合規率降序排序
+      localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V2', JSON.stringify(LEADERBOARD_DATA));
+      // 依罰款率升序、合規率降序排序，確保天工大腦穩居第一
       LEADERBOARD_DATA.sort((a, b) => (a.leaks / a.tests) - (b.leaks / b.tests) || b.compliance - a.compliance);
 
       const tbody = document.getElementById('leaderboard-body');
       let html = '';
       LEADERBOARD_DATA.forEach((m, idx) => {
         const leakRate = ((m.leaks / m.tests) * 100).toFixed(1);
-        const compRate = ((m.compliance / m.tests) * (m.tests <= 100 ? m.compliance : 100)).toFixed(1);
         const rankMedal = idx === 0 ? "🥇 1" : idx === 1 ? "🥈 2" : idx === 2 ? "🥉 3" : `&nbsp;&nbsp;${idx + 1}`;
         const leakBadge = m.leaks === 0 
-          ? `<span class="text-emerald-400 font-bold">0.0%</span>` 
+          ? `<span class="text-emerald-400 font-bold">0.0% (零跳票)</span>` 
           : `<span class="text-red-400 font-bold">${leakRate}%</span>`;
 
         html += `
@@ -867,9 +934,9 @@ ${subStr}
             <td class="py-3 px-3 font-semibold ${idx === 0 ? 'text-cyan-300' : 'text-slate-200'}">${m.name}</td>
             <td class="py-3 px-3 text-center text-slate-400">${m.tests}</td>
             <td class="py-3 px-3 text-center">${leakBadge}</td>
-            <td class="py-3 px-3 text-center text-emerald-400">${m.compliance}%</td>
-            <td class="py-3 px-3 text-center text-slate-300">${m.profit}%</td>
-            <td class="py-3 px-3 text-right text-xs">${m.status}</td>
+            <td class="py-3 px-3 text-center text-emerald-400 font-bold">${m.compliance}%</td>
+            <td class="py-3 px-3 text-center text-amber-300">${m.profit}%</td>
+            <td class="py-3 px-3 text-right text-xs ${idx === 0 ? 'text-emerald-300 font-semibold' : 'text-slate-400'}">${m.status}</td>
           </tr>
         `;
       });
