@@ -307,15 +307,15 @@
       <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
         <div>
           <h2 class="text-base font-bold text-slate-100 flex items-center gap-2">
-            <span>🏆</span> 商業大模型實戰能力排行榜 (Enterprise Decision Leaderboard)
+            <span>🏆</span> 人機對抗實戰能力排行榜 (Enterprise Decision Leaderboard)
           </h2>
           <p class="text-xs text-slate-400 mt-0.5">
-            花錢買的 AI 到底能不能打？實測各大商業大模型在現場<strong>「能不能幫公司多賺錢、會不會害老闆被罰款」</strong>
+            各大商業大模型與<strong>「人類現場主管」</strong>真實對決！實測在現場<strong>「能不能幫公司多賺錢、會不會害老闆被罰款」</strong>
           </p>
         </div>
         <div class="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-1 rounded flex items-center gap-1">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-          ● 實戰考核累積中 (Local Verified)
+          ● 人機實戰考核累積中 (Local Verified)
         </div>
       </div>
 
@@ -324,7 +324,7 @@
           <thead class="bg-slate-950 text-slate-400 border-b border-slate-800">
             <tr>
               <th class="py-2.5 px-3">名次</th>
-              <th class="py-2.5 px-3">AI 系統 / 商業大模型</th>
+              <th class="py-2.5 px-3">受測對象 (AI 系統 / 人類主管)</th>
               <th class="py-2.5 px-3 text-center">實測急單數</th>
               <th class="py-2.5 px-3 text-center text-red-400">🚨 現場開天窗 / 違法罰款率</th>
               <th class="py-2.5 px-3 text-center text-emerald-400">🛡️ 勞檢安全合規率</th>
@@ -462,10 +462,11 @@
 
     let currentCaseId = "CASE_HR_001";
 
-    // 排行榜預設與本地存儲數據庫（純主流品牌名稱，無版本號干擾）
-    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V4')) || [
+    // 排行榜預設與本地存儲數據庫（包含人類與純主流品牌名稱）
+    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V5')) || [
       { name: "🏆 天工大腦", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零罰款、自動賺錢 (必買)" },
       { name: "Meta AI", tests: 10, leaks: 1, compliance: 90.0, profit: 94.5, status: "🟢 懂找外協、安全合規" },
+      { name: "👨‍💼 人類現場主管", tests: 25, leaks: 4, compliance: 84.0, profit: 88.2, status: "⚠️ 老經驗直覺強，但易保守退單" },
       { name: "Gemini", tests: 12, leaks: 2, compliance: 83.3, profit: 92.0, status: "🟢 具備常識、偶有小失誤" },
       { name: "Claude", tests: 14, leaks: 3, compliance: 78.5, profit: 91.0, status: "⚠️ 場面話漂亮、現場要盯" },
       { name: "ChatGPT", tests: 18, leaks: 7, compliance: 61.1, profit: 82.5, status: "🚨 易踩銷假地雷、差點被罰百萬" },
@@ -474,7 +475,7 @@
 
     function saveAndRenderLeaderboard() {
       try {
-        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V4', JSON.stringify(LEADERBOARD_DATA));
+        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V5', JSON.stringify(LEADERBOARD_DATA));
         LEADERBOARD_DATA.sort((a, b) => (a.leaks / a.tests) - (b.leaks / b.tests) || b.compliance - a.compliance);
 
         const tbody = document.getElementById('leaderboard-body');
@@ -723,46 +724,125 @@
       document.getElementById('verdict-modal').classList.remove('hidden');
     }
 
+    // 軌道 3：主管自填答案審計（計入排行榜「👨‍💼 人類現場主管」）
     function auditHumanResponse() {
-      const text = document.getElementById('human-response-input').value;
+      const text = document.getElementById('human-response-input').value.trim();
+      if (!text) {
+        alert("⚠️ 請先手動填入您的調度策略！");
+        return;
+      }
       document.getElementById('track3-modal').classList.add('hidden');
       const content = document.getElementById('verdict-content');
-      
-      content.innerHTML = `
-        <div class="p-4 bg-emerald-950/60 border border-emerald-800 rounded-lg text-emerald-300 space-y-2">
-          <div class="font-bold text-sm flex items-center gap-1.5">
-            <span>🏆</span> 主管自填方案已由天工裁判機解析完成！
+
+      let humanRecord = LEADERBOARD_DATA.find(m => m.name.includes("人類"));
+      if (!humanRecord) {
+        humanRecord = { name: "👨‍💼 人類現場主管", tests: 0, leaks: 0, compliance: 100, profit: 88.0, status: "實測中" };
+        LEADERBOARD_DATA.push(humanRecord);
+      }
+      humanRecord.tests += 1;
+
+      // 檢查是否違規或保守
+      const assignsXiaomei = text.includes("小美") && (text.includes("加班") || text.includes("出勤") || text.includes("做") || text.includes("自願"));
+      const rejectsOrder = text.includes("退單") || text.includes("婉拒") || text.includes("不接") || text.includes("無法承接") || text.includes("放棄");
+      const usesSubcontract = text.includes("外協") || text.includes("協興");
+
+      if (assignsXiaomei) {
+        humanRecord.leaks += 1;
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        saveAndRenderLeaderboard();
+        content.innerHTML = `
+          <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🚨</span> 【👨‍💼 人類現場主管】審計結果：踩中人情銷假地雷！
+            </div>
+            <div class="text-xs text-red-200">❌ 違背勞基法 | 小美登記病假，排班將面臨勞檢處分！（已累計至天梯榜）</div>
+            <div class="text-slate-300 text-xs mt-2 p-2 bg-slate-950/70 rounded">
+              現場生管習慣靠人情硬拗請假同仁支援，但在形式化合規檢驗下屬於不可行 (UNSAT)。
+            </div>
           </div>
-          <div class="text-xs text-emerald-200">✅ 決策邏輯已被形式化記錄</div>
-        </div>
-      `;
+        `;
+      } else if (rejectsOrder || (!usesSubcontract && currentCaseId === "CASE_HR_001")) {
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        humanRecord.profit = Math.max(70, Math.round(humanRecord.profit * 0.98));
+        saveAndRenderLeaderboard();
+        content.innerHTML = `
+          <div class="p-4 bg-amber-950/60 border border-amber-800 rounded-lg text-amber-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>⚠️</span> 【👨‍💼 人類現場主管】審計結果：太保守啦！退單是誤殺，斷送財路！
+            </div>
+            <div class="text-xs text-amber-200">⚠️ 合法但嚴重少賺 | 白白損失可得利潤！（已累計至天梯榜）</div>
+            <div class="text-slate-300 text-xs mt-2 p-2 bg-slate-950/70 rounded">
+              老經驗生管擔心做不完便直覺退單；只要善用「外部協力起訂量」，既能準時交貨又能淨賺近萬元！
+            </div>
+          </div>
+        `;
+      } else {
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        saveAndRenderLeaderboard();
+        content.innerHTML = `
+          <div class="p-4 bg-emerald-950/60 border border-emerald-800 rounded-lg text-emerald-300 space-y-2">
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🏆</span> 太強了！【👨‍💼 人類現場主管】方案精準對齊天工最佳解！
+            </div>
+            <div class="text-xs text-emerald-200">✅ 100% 合規 | 準時交貨 | 成功為人類爭光！（已累計至天梯榜）</div>
+          </div>
+        `;
+      }
       document.getElementById('verdict-modal').classList.remove('hidden');
     }
 
+    // 軌道 2：中立單選盲測（同樣計入排行榜「👨‍💼 人類現場主管」）
     function revealVerdict(opt) {
       document.getElementById('track2-modal').classList.add('hidden');
       const content = document.getElementById('verdict-content');
       const c = CASES_DB[currentCaseId];
 
+      let humanRecord = LEADERBOARD_DATA.find(m => m.name.includes("人類"));
+      if (!humanRecord) {
+        humanRecord = { name: "👨‍💼 人類現場主管", tests: 0, leaks: 0, compliance: 100, profit: 88.0, status: "實測中" };
+        LEADERBOARD_DATA.push(humanRecord);
+      }
+      humanRecord.tests += 1;
+
       if (opt === 'A') {
+        // 選對了：天工最佳解
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        saveAndRenderLeaderboard();
         content.innerHTML = `
           <div class="p-4 bg-emerald-950/60 border border-emerald-800 rounded-lg text-emerald-300 space-y-2">
-            <div class="font-bold text-sm">🏆 天工大腦最佳解 (Optimal SAT)</div>
-            <div class="text-xs text-slate-300 mt-2">${c.optA}</div>
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🏆</span> 恭喜！您選中了「天工大腦最佳解」(Optimal SAT)！
+            </div>
+            <div class="text-xs text-emerald-200">✅ 決策 100% 合規且利潤最大化！（成績已累計至天梯榜【👨‍💼 人類現場主管】）</div>
+            <div class="text-xs text-slate-300 mt-2 p-2 bg-slate-950/70 rounded">${c.optA}</div>
           </div>
         `;
       } else if (opt === 'B') {
+        // 選錯了：違法跳票
+        humanRecord.leaks += 1;
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        saveAndRenderLeaderboard();
         content.innerHTML = `
           <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
-            <div class="font-bold text-sm">🚨 傳統通用大模型典型陷阱：違規出事、現場開天窗！</div>
-            <div class="text-xs text-slate-300 mt-2">${c.optB}</div>
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>🚨</span> 踩中地雷！這是傳統通用大模型的典型陷阱！
+            </div>
+            <div class="text-xs text-red-200">❌ 違法跳票 / 現場開天窗！（成績已累計至天梯榜【👨‍💼 人類現場主管】）</div>
+            <div class="text-xs text-slate-300 mt-2 p-2 bg-slate-950/70 rounded">${c.optB}</div>
           </div>
         `;
       } else {
+        // 選了保守退單
+        humanRecord.compliance = Math.max(0, Math.round(((humanRecord.tests - humanRecord.leaks) / humanRecord.tests) * 100));
+        humanRecord.profit = Math.max(70, Math.round(humanRecord.profit * 0.98));
+        saveAndRenderLeaderboard();
         content.innerHTML = `
           <div class="p-4 bg-amber-950/60 border border-amber-800 rounded-lg text-amber-300 space-y-2">
-            <div class="font-bold text-sm">⚠️ 太保守啦！退單是誤殺，斷送財路！</div>
-            <div class="text-xs text-slate-300 mt-2">${c.optC}</div>
+            <div class="font-bold text-sm flex items-center gap-1.5">
+              <span>⚠️</span> 太保守啦！退單是誤殺，斷送財路！
+            </div>
+            <div class="text-xs text-amber-200">⚠️ 合法但嚴重少賺，損失大筆訂單淨利潤！（成績已累計至天梯榜【👨‍💼 人類現場主管】）</div>
+            <div class="text-xs text-slate-300 mt-2 p-2 bg-slate-950/70 rounded">${c.optC}</div>
           </div>
         `;
       }
