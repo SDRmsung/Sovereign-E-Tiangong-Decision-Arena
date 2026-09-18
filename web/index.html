@@ -217,14 +217,16 @@
             <span class="text-[11px] text-slate-400">💡 戰績將自動累積至天梯榜</span>
           </div>
           <input type="hidden" id="selected-model-name" value="ChatGPT">
-          <div class="grid grid-cols-4 sm:grid-cols-7 gap-2" id="model-buttons-group">
-            <button type="button" onclick="selectModelBtn('ChatGPT')" id="btn-model-ChatGPT" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-purple-600 text-white border-purple-400 shadow-md">ChatGPT</button>
-            <button type="button" onclick="selectModelBtn('Claude')" id="btn-model-Claude" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Claude</button>
-            <button type="button" onclick="selectModelBtn('Gemini')" id="btn-model-Gemini" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Gemini</button>
-            <button type="button" onclick="selectModelBtn('Meta AI')" id="btn-model-MetaAI" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Meta AI</button>
-            <button type="button" onclick="selectModelBtn('DeepSeek')" id="btn-model-DeepSeek" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">DeepSeek</button>
-            <button type="button" onclick="selectModelBtn('自建Agents')" id="btn-model-CustomAgents" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">🤖 自建Agents</button>
-            <button type="button" onclick="selectModelBtn('其他大模型')" id="btn-model-Other" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">其他</button>
+          <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-9 gap-1.5" id="model-buttons-group">
+            <button type="button" onclick="selectModelBtn('ChatGPT')" id="btn-model-ChatGPT" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-purple-600 text-white border-purple-400 shadow-md">ChatGPT</button>
+            <button type="button" onclick="selectModelBtn('Gemini')" id="btn-model-Gemini" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Gemini</button>
+            <button type="button" onclick="selectModelBtn('Claude')" id="btn-model-Claude" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Claude</button>
+            <button type="button" onclick="selectModelBtn('DeepSeek')" id="btn-model-DeepSeek" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">DeepSeek</button>
+            <button type="button" onclick="selectModelBtn('Meta AI')" id="btn-model-MetaAI" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Meta AI</button>
+            <button type="button" onclick="selectModelBtn('Copilot')" id="btn-model-Copilot" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Copilot</button>
+            <button type="button" onclick="selectModelBtn('Grok')" id="btn-model-Grok" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Grok</button>
+            <button type="button" onclick="selectModelBtn('自建Agents')" id="btn-model-CustomAgents" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">🤖自建Agents</button>
+            <button type="button" onclick="selectModelBtn('其他大模型')" id="btn-model-Other" class="model-pick-btn py-2 px-2 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">其他</button>
           </div>
         </div>
 
@@ -463,25 +465,27 @@
 
     let currentCaseId = "CASE_HR_001";
 
-    // 排行榜四大評測陣營：
+    // 排行榜四大評測陣營（商業 LLM 依全球市佔率排序）：
     // 1. 本系統 (天工大腦 - 預設第一名)
     // 2. 人類測試者 (主管或老闆，統稱「人類測試者」)
-    // 3. 常見商用 LLM (ChatGPT, Gemini, Claude, Meta AI, DeepSeek 等)
+    // 3. 常見商用 LLM (ChatGPT 53.9%, Gemini 27.9%, Claude 9.2%, DeepSeek 4.1%, Meta AI, Copilot, Grok 等)
     // 4. 自建 Agents (企業內部自研 Agent 流程)
-    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V6')) || [
+    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V7')) || [
       { name: "🏆 天工大腦 (本系統)", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零罰款、自動賺錢 (首選)" },
       { name: "👤 人類測試者", tests: 25, leaks: 4, compliance: 84.0, profit: 88.2, status: "⚠️ 老經驗直覺強，但易保守退單" },
       { name: "🤖 自建Agents", tests: 15, leaks: 2, compliance: 86.7, profit: 91.5, status: "🟢 串接內部工具、邊界判定待強化" },
       { name: "Meta AI", tests: 10, leaks: 1, compliance: 90.0, profit: 94.5, status: "🟢 懂找外協、安全合規" },
       { name: "Gemini", tests: 12, leaks: 2, compliance: 83.3, profit: 92.0, status: "🟢 具備常識、偶有小失誤" },
       { name: "Claude", tests: 14, leaks: 3, compliance: 78.5, profit: 91.0, status: "⚠️ 場面話漂亮、現場要盯" },
+      { name: "Copilot", tests: 8, leaks: 2, compliance: 75.0, profit: 89.0, status: "⚠️ 偏重常規流程、應變彈性弱" },
       { name: "DeepSeek", tests: 10, leaks: 3, compliance: 70.0, profit: 86.0, status: "⚠️ 邏輯偶發漂移、需主管把關" },
+      { name: "Grok", tests: 8, leaks: 3, compliance: 62.5, profit: 84.0, status: "⚠️ 風格前衛奔放、合規邊界飄移" },
       { name: "ChatGPT", tests: 18, leaks: 7, compliance: 61.1, profit: 82.5, status: "🚨 易踩銷假地雷、差點被罰百萬" }
     ];
 
     function saveAndRenderLeaderboard() {
       try {
-        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V6', JSON.stringify(LEADERBOARD_DATA));
+        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V7', JSON.stringify(LEADERBOARD_DATA));
         // 天工大腦永遠鎖定第一名，其餘依 (漏報率升序 -> 合規率降序 -> 利潤降序) 排序
         LEADERBOARD_DATA.sort((a, b) => {
           if (a.name.includes("天工大腦")) return -1;
@@ -635,7 +639,9 @@
       const targetId = modelName === '其他大模型' ? 'btn-model-Other' 
         : (modelName === 'Meta AI' ? 'btn-model-MetaAI' 
         : (modelName === '自建Agents' ? 'btn-model-CustomAgents' 
-        : 'btn-model-' + modelName));
+        : (modelName === 'Copilot' ? 'btn-model-Copilot'
+        : (modelName === 'Grok' ? 'btn-model-Grok'
+        : 'btn-model-' + modelName))));
       const targetBtn = document.getElementById(targetId);
       if (targetBtn) {
         targetBtn.classList.remove('bg-slate-950', 'text-slate-300', 'border-slate-700');
