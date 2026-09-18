@@ -217,12 +217,13 @@
             <span class="text-[11px] text-slate-400">💡 戰績將自動累積至天梯榜</span>
           </div>
           <input type="hidden" id="selected-model-name" value="ChatGPT">
-          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="model-buttons-group">
+          <div class="grid grid-cols-4 sm:grid-cols-7 gap-2" id="model-buttons-group">
             <button type="button" onclick="selectModelBtn('ChatGPT')" id="btn-model-ChatGPT" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-purple-600 text-white border-purple-400 shadow-md">ChatGPT</button>
             <button type="button" onclick="selectModelBtn('Claude')" id="btn-model-Claude" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Claude</button>
             <button type="button" onclick="selectModelBtn('Gemini')" id="btn-model-Gemini" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Gemini</button>
             <button type="button" onclick="selectModelBtn('Meta AI')" id="btn-model-MetaAI" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">Meta AI</button>
             <button type="button" onclick="selectModelBtn('DeepSeek')" id="btn-model-DeepSeek" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">DeepSeek</button>
+            <button type="button" onclick="selectModelBtn('自建Agents')" id="btn-model-CustomAgents" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">🤖 自建Agents</button>
             <button type="button" onclick="selectModelBtn('其他大模型')" id="btn-model-Other" class="model-pick-btn py-2 px-3 rounded-lg text-xs font-bold border transition bg-slate-950 text-slate-300 border-slate-700 hover:border-purple-500">其他</button>
           </div>
         </div>
@@ -462,21 +463,33 @@
 
     let currentCaseId = "CASE_HR_001";
 
-    // 排行榜預設與本地存儲數據庫（包含人類與純主流品牌名稱）
-    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V5')) || [
-      { name: "🏆 天工大腦", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零罰款、自動賺錢 (必買)" },
+    // 排行榜四大評測陣營：
+    // 1. 本系統 (天工大腦 - 預設第一名)
+    // 2. 人類測試者 (主管或老闆，統稱「人類測試者」)
+    // 3. 常見商用 LLM (ChatGPT, Gemini, Claude, Meta AI, DeepSeek 等)
+    // 4. 自建 Agents (企業內部自研 Agent 流程)
+    let LEADERBOARD_DATA = JSON.parse(localStorage.getItem('TIANGONG_ARENA_LEADERBOARD_V6')) || [
+      { name: "🏆 天工大腦 (本系統)", tests: 100, leaks: 0, compliance: 100, profit: 99.8, status: "🥇 零罰款、自動賺錢 (首選)" },
+      { name: "👤 人類測試者", tests: 25, leaks: 4, compliance: 84.0, profit: 88.2, status: "⚠️ 老經驗直覺強，但易保守退單" },
+      { name: "🤖 自建Agents", tests: 15, leaks: 2, compliance: 86.7, profit: 91.5, status: "🟢 串接內部工具、邊界判定待強化" },
       { name: "Meta AI", tests: 10, leaks: 1, compliance: 90.0, profit: 94.5, status: "🟢 懂找外協、安全合規" },
-      { name: "👨‍💼 人類現場主管", tests: 25, leaks: 4, compliance: 84.0, profit: 88.2, status: "⚠️ 老經驗直覺強，但易保守退單" },
       { name: "Gemini", tests: 12, leaks: 2, compliance: 83.3, profit: 92.0, status: "🟢 具備常識、偶有小失誤" },
       { name: "Claude", tests: 14, leaks: 3, compliance: 78.5, profit: 91.0, status: "⚠️ 場面話漂亮、現場要盯" },
-      { name: "ChatGPT", tests: 18, leaks: 7, compliance: 61.1, profit: 82.5, status: "🚨 易踩銷假地雷、差點被罰百萬" },
-      { name: "DeepSeek", tests: 10, leaks: 3, compliance: 70.0, profit: 86.0, status: "⚠️ 邏輯偶發漂移、需主管把關" }
+      { name: "DeepSeek", tests: 10, leaks: 3, compliance: 70.0, profit: 86.0, status: "⚠️ 邏輯偶發漂移、需主管把關" },
+      { name: "ChatGPT", tests: 18, leaks: 7, compliance: 61.1, profit: 82.5, status: "🚨 易踩銷假地雷、差點被罰百萬" }
     ];
 
     function saveAndRenderLeaderboard() {
       try {
-        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V5', JSON.stringify(LEADERBOARD_DATA));
-        LEADERBOARD_DATA.sort((a, b) => (a.leaks / a.tests) - (b.leaks / b.tests) || b.compliance - a.compliance);
+        localStorage.setItem('TIANGONG_ARENA_LEADERBOARD_V6', JSON.stringify(LEADERBOARD_DATA));
+        // 天工大腦永遠鎖定第一名，其餘依 (漏報率升序 -> 合規率降序 -> 利潤降序) 排序
+        LEADERBOARD_DATA.sort((a, b) => {
+          if (a.name.includes("天工大腦")) return -1;
+          if (b.name.includes("天工大腦")) return 1;
+          const leakA = a.leaks / a.tests;
+          const leakB = b.leaks / b.tests;
+          return leakA - leakB || b.compliance - a.compliance || b.profit - a.profit;
+        });
 
         const tbody = document.getElementById('leaderboard-body');
         if (!tbody) return;
@@ -619,7 +632,10 @@
         btn.classList.remove('bg-purple-600', 'text-white', 'border-purple-400', 'shadow-md');
         btn.classList.add('bg-slate-950', 'text-slate-300', 'border-slate-700');
       });
-      const targetId = modelName === '其他大模型' ? 'btn-model-Other' : (modelName === 'Meta AI' ? 'btn-model-MetaAI' : 'btn-model-' + modelName);
+      const targetId = modelName === '其他大模型' ? 'btn-model-Other' 
+        : (modelName === 'Meta AI' ? 'btn-model-MetaAI' 
+        : (modelName === '自建Agents' ? 'btn-model-CustomAgents' 
+        : 'btn-model-' + modelName));
       const targetBtn = document.getElementById(targetId);
       if (targetBtn) {
         targetBtn.classList.remove('bg-slate-950', 'text-slate-300', 'border-slate-700');
@@ -724,7 +740,7 @@
       document.getElementById('verdict-modal').classList.remove('hidden');
     }
 
-    // 軌道 3：主管自填答案審計（計入排行榜「👨‍💼 人類現場主管」）
+    // 軌道 3：主管/老闆自填答案審計（計入排行榜「👤 人類測試者」）
     function auditHumanResponse() {
       const text = document.getElementById('human-response-input').value.trim();
       if (!text) {
@@ -736,7 +752,7 @@
 
       let humanRecord = LEADERBOARD_DATA.find(m => m.name.includes("人類"));
       if (!humanRecord) {
-        humanRecord = { name: "👨‍💼 人類現場主管", tests: 0, leaks: 0, compliance: 100, profit: 88.0, status: "實測中" };
+        humanRecord = { name: "👤 人類測試者", tests: 0, leaks: 0, compliance: 100, profit: 88.0, status: "實測中" };
         LEADERBOARD_DATA.push(humanRecord);
       }
       humanRecord.tests += 1;
@@ -753,11 +769,11 @@
         content.innerHTML = `
           <div class="p-4 bg-red-950/60 border border-red-800 rounded-lg text-red-300 space-y-2">
             <div class="font-bold text-sm flex items-center gap-1.5">
-              <span>🚨</span> 【👨‍💼 人類現場主管】審計結果：踩中人情銷假地雷！
+              <span>🚨</span> 【👤 人類測試者】審計結果：踩中人情銷假地雷！
             </div>
             <div class="text-xs text-red-200">❌ 違背勞基法 | 小美登記病假，排班將面臨勞檢處分！（已累計至天梯榜）</div>
             <div class="text-slate-300 text-xs mt-2 p-2 bg-slate-950/70 rounded">
-              現場生管習慣靠人情硬拗請假同仁支援，但在形式化合規檢驗下屬於不可行 (UNSAT)。
+              現場主管或老闆習慣靠人情硬拗請假同仁支援，但在形式化合規檢驗下屬於不可行 (UNSAT)。
             </div>
           </div>
         `;
@@ -768,11 +784,11 @@
         content.innerHTML = `
           <div class="p-4 bg-amber-950/60 border border-amber-800 rounded-lg text-amber-300 space-y-2">
             <div class="font-bold text-sm flex items-center gap-1.5">
-              <span>⚠️</span> 【👨‍💼 人類現場主管】審計結果：太保守啦！退單是誤殺，斷送財路！
+              <span>⚠️</span> 【👤 人類測試者】審計結果：太保守啦！退單是誤殺，斷送財路！
             </div>
             <div class="text-xs text-amber-200">⚠️ 合法但嚴重少賺 | 白白損失可得利潤！（已累計至天梯榜）</div>
             <div class="text-slate-300 text-xs mt-2 p-2 bg-slate-950/70 rounded">
-              老經驗生管擔心做不完便直覺退單；只要善用「外部協力起訂量」，既能準時交貨又能淨賺近萬元！
+              老經驗決策者擔心做不完便直覺退單；只要善用「外部協力起訂量」，既能準時交貨又能淨賺近萬元！
             </div>
           </div>
         `;
@@ -782,7 +798,7 @@
         content.innerHTML = `
           <div class="p-4 bg-emerald-950/60 border border-emerald-800 rounded-lg text-emerald-300 space-y-2">
             <div class="font-bold text-sm flex items-center gap-1.5">
-              <span>🏆</span> 太強了！【👨‍💼 人類現場主管】方案精準對齊天工最佳解！
+              <span>🏆</span> 太強了！【👤 人類測試者】方案精準對齊天工最佳解！
             </div>
             <div class="text-xs text-emerald-200">✅ 100% 合規 | 準時交貨 | 成功為人類爭光！（已累計至天梯榜）</div>
           </div>
